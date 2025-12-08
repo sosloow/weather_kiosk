@@ -1,0 +1,136 @@
+<div class="
+    w-[1024px] h-[600px] fixed top-0 left-0
+    grid grid-cols-[1fr_1fr_80px] grid-rows-[auto_1fr_auto]
+    p-3 gap-3
+    bg-base-300
+    overflow-hidden
+  ">
+  <header class="
+      col-span-2
+      flex justify-between items-center
+      px-4 py-2.5
+      bg-base-200/90 border border-base-300/70
+      rounded-2xl shadow-lg backdrop-blur
+      glossy-top-border
+    ">
+    <div class="flex flex-col gap-0.5">
+      <div
+        id="time-display"
+        class="
+          text-[28px] font-semibold leading-none
+          text-base-content drop-shadow-lg
+        "
+      >
+        --:--
+      </div>
+      <div
+        id="date-display"
+        class="
+          text-xs font-medium leading-none tracking-[0.5px]
+          text-base-content/70
+        "
+      >
+        -- --- --
+      </div>
+    </div>
+    <div
+      id="location"
+      class="
+        text-base font-medium
+        text-base-content/80
+      "
+    >
+      {if assigns[:header_title], do: @header_title, else: ""}
+    </div>
+    <div
+      id="status"
+      class="
+        inline-flex items-center gap-1.5
+        px-3 py-1.5 rounded-[20px]
+        text-xs font-semibold uppercase tracking-[0.5px]
+        bg-success/15 text-success border border-success/30
+      "
+    >
+      <span class="w-1.5 h-1.5 rounded-full bg-current"></span> Online
+    </div>
+  </header>
+
+  <main
+    id="page-content"
+    class="
+      col-span-2 row-start-2
+      grid grid-cols-2 grid-rows-[auto_1fr] gap-3
+      min-h-0 overflow-hidden
+    "
+  >
+    {@inner_content}
+  </main>
+
+  <nav class="
+      col-start-3 row-span-2
+      flex flex-col gap-2.5
+      p-3
+      bg-base-200/90 border border-base-300/70
+      rounded-2xl shadow-lg backdrop-blur
+      glossy-top-border
+      items-center justify-start
+      overflow-y-auto
+    ">
+    <a
+      href={~p"/weather"}
+      data-page="weather"
+      class="
+        flex items-center justify-center
+        w-full aspect-square
+        rounded-2xl
+        bg-primary/20 border border-primary/40
+        shadow-md
+        transition-all duration-200
+      "
+    >
+      <img
+        src={~p"/assets/images/cloudy.png"}
+        alt="Weather"
+        class="w-12 h-12 object-contain drop-shadow-md"
+      />
+    </a>
+    <a
+      href="#"
+      data-page="calendar"
+      class="
+        flex items-center justify-center
+        w-full aspect-square
+        rounded-2xl
+        bg-transparent border border-transparent
+        hover:bg-base-200/60 hover:border-base-300/60
+        transition-all duration-200
+      "
+    >
+      <img
+        src={~p"/assets/images/sunny.png"}
+        alt="Calendar"
+        class="w-12 h-12 object-contain opacity-75 hover:opacity-100 transition-all duration-200"
+      />
+    </a>
+    <a
+      href="#"
+      data-page="home"
+      class="
+        flex items-center justify-center
+        w-full aspect-square
+        rounded-2xl
+        bg-transparent border border-transparent
+        hover:bg-base-200/60 hover:border-base-300/60
+        transition-all duration-200
+      "
+    >
+      <img
+        src={~p"/assets/images/partly-cloudy.png"}
+        alt="Home"
+        class="w-12 h-12 object-contain opacity-75 hover:opacity-100 transition-all duration-200"
+      />
+    </a>
+  </nav>
+
+  <.flash_group flash={@flash} />
+</div>

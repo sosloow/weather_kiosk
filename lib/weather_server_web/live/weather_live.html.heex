@@ -1,0 +1,157 @@
+<section class="
+    card bg-base-200/90 border border-base-300/70
+    shadow-xl rounded-2xl backdrop-blur
+    relative overflow-hidden h-full
+    before:absolute before:top-0 before:left-0 before:right-0 before:h-px
+    before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0
+  ">
+  <div class="h-full flex items-center justify-center">
+    <div class="flex items-center gap-8 w-[85%] mx-auto">
+      <div class="flex flex-col items-start flex-[3]">
+        <div
+          id="temperature"
+          class="
+            text-[72px] leading-none font-light
+            text-base-content drop-shadow-lg mb-2
+          "
+        >
+          {@weather.current.temp_c}°
+        </div>
+
+        <div class="text-left">
+          <div
+            id="condition"
+            class="
+              text-base font-medium text-base-content/80 mb-1
+            "
+          >
+            {@weather.current.condition_text}
+          </div>
+
+          <div
+            id="feels-like"
+            class="
+              text-[13px] text-base-content/60
+            "
+          >
+            Feels like {@weather.current.feelslike_c}°
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center flex-[2] pr-2">
+        <img
+          id="current-icon"
+          src={@weather.current.icon}
+          alt="Weather"
+          class="
+            w-[120px] h-[120px] object-contain drop-shadow-md
+          "
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="
+    card bg-base-200/90 border border-base-300/70
+    shadow-xl rounded-2xl backdrop-blur
+    p-4 min-h-0 relative
+    before:absolute before:top-0 before:left-0 before:right-0 before:h-px
+    before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0
+  ">
+  <div
+    class="
+      grid grid-cols-2 gap-3
+      h-full content-stretch
+    "
+  >
+    <.stat_card title="Humidity" value_id="humidity">
+      {@weather.current.humidity}%
+    </.stat_card>
+    <.stat_card title="Wind Speed" value_id="wind-speed">
+      {@weather.current.wind_kph} km/h
+    </.stat_card>
+    <.stat_card title="Pressure" value_id="pressure">
+      {@weather.current.pressure_mb} mb
+    </.stat_card>
+    <.stat_card title="UV Index" value_id="uv-index">
+      {@weather.current.uv}
+    </.stat_card>
+  </div>
+</section>
+
+<section class="
+    col-span-2
+    card bg-base-200/90 border border-base-300/70
+    shadow-xl rounded-2xl backdrop-blur
+    p-4 min-h-0 overflow-hidden h-full
+    flex flex-col relative
+    before:absolute before:top-0 before:left-0 before:right-0 before:h-px
+    before:bg-gradient-to-r before:from-white/0 before:via-white/20 before:to-white/0
+  ">
+  <h2 class="text-sm font-semibold mb-3 text-base-content/80">
+    3-Day Forecast
+  </h2>
+
+  <div
+    id="forecast-grid"
+    class="
+      grid grid-cols-3 gap-3 h-full content-stretch
+      relative
+      after:absolute after:inset-x-6 after:top-0 after:bottom-0
+      after:rounded-[1.25rem] after:-z-10
+    "
+  >
+<div
+  :for={day <- @weather.forecast}
+  class="
+    card
+    bg-gradient-to-b from-base-100 to-base-100/85
+    border border-base-300/80
+    shadow-lg hover:shadow-2xl
+    transition-all duration-200
+
+    h-full min-h-0 relative overflow-hidden
+    rounded-xl backdrop-blur-sm
+
+    hover:-translate-y-[2px]
+
+    before:absolute before:inset-x-4 before:top-1
+    before:h-6
+    before:opacity-70 before:blur-[1px]
+    before:pointer-events-none
+  "
+>
+      <div class="card-body p-3 h-full flex-row items-center justify-between gap-4">
+        <div class="flex flex-col flex-1 pl-2">
+          <div class="text-[11px] text-base-content/70 font-medium tracking-[0.5px] leading-none mb-2">
+            {Calendar.strftime(day.date, "%a, %b %d")}
+          </div>
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="text-[28px] font-bold text-base-content leading-none">
+              {day.max_temp}°
+            </span>
+            <span class="text-xl font-medium text-base-content/60 leading-none">
+              {day.min_temp}°
+            </span>
+          </div>
+          <div class="flex flex-col gap-0.5">
+            <div class="text-[10px] text-base-content/60 font-medium leading-[1.2]">
+              Humidity: {Map.get(day, :avghumidity, "--")}%
+            </div>
+            <div class="text-[10px] text-base-content/60 font-medium leading-[1.2]">
+              Wind: {Map.get(day, :maxwind_kph, "--")} km/h
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center flex-none pr-4">
+          <img
+            src={day.icon}
+            class="w-[75px] h-[75px] object-contain drop-shadow-sm"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
