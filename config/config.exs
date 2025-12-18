@@ -36,7 +36,7 @@ config :esbuild,
   version: "0.25.4",
   weather_server: [
     args:
-      ~w(js/app.js --bundle --target=es2022 --outdir=../priv/static/assets/js --external:/fonts/* --external:/images/* --alias:@=.),
+      ~w(js/app.js --bundle --target=es2022 --outdir=../priv/static/assets/js --external:/fonts/* --alias:@=.),
     cd: Path.expand("../assets", __DIR__),
     env: %{"NODE_PATH" => [Path.expand("../deps", __DIR__), Mix.Project.build_path()]}
   ]
@@ -63,3 +63,10 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
+
+if Mix.env() == :test do
+  System.put_env("OPENAQ_API_KEY", "test-key")
+end
+
+config :weather_server, :openaq_req_options, []
+config :weather_server, time_module: WeatherServer.Utils.Time

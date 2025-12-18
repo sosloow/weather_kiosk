@@ -35,6 +35,8 @@ weather_server-*.tar
 npm-debug.log
 /assets/node_modules/
 
+.envrc
+
 # Database files
 *.db
 *.db-*

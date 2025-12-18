@@ -1,8 +1,8 @@
 defmodule WeatherServerWeb.PageControllerTest do
   use WeatherServerWeb.ConnCase
 
-  test "GET /", %{conn: conn} do
-    conn = get(conn, ~p"/")
-    assert html_response(conn, 200) =~ "Peace of mind from prototype to production"
+  test "GET / redirects to /weather", %{conn: conn} do
+    conn = get(conn, "/")
+    assert redirected_to(conn) == ~p"/weather"
   end
 end

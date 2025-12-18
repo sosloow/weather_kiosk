@@ -1,0 +1,1661 @@
+{
+    "meta": {
+        "name": "openaq-api",
+        "website": "/",
+        "page": 1,
+        "limit": 1000,
+        "found": 23
+    },
+    "results": [
+        {
+            "id": 370669,
+            "name": "Yerevan",
+            "locality": "N/A",
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 4,
+                "name": "Unknown Governmental Organization"
+            },
+            "provider": {
+                "id": 119,
+                "name": "AirNow"
+            },
+            "isMobile": false,
+            "isMonitor": true,
+            "instruments": [
+                {
+                    "id": 2,
+                    "name": "Government Monitor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 2087379,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.16515,
+                "longitude": 44.48171
+            },
+            "licenses": [
+                {
+                    "id": 33,
+                    "name": "US Public Domain",
+                    "attribution": {
+                        "name": "Unknown Governmental Organization",
+                        "url": null
+                    },
+                    "dateFrom": "2016-01-30",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.48171,
+                40.16515,
+                44.48171,
+                40.16515
+            ],
+            "distance": 2747.66649105,
+            "datetimeFirst": {
+                "utc": "2022-11-14T09:00:00Z",
+                "local": "2022-11-14T13:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2023-06-15T13:00:00Z",
+                "local": "2023-06-15T17:00:00+04:00"
+            }
+        },
+        {
+            "id": 2960624,
+            "name": "82/5 Aytsemnik Urartu street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141011,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.17785,
+                "longitude": 44.54284
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.54284,
+                40.17785,
+                44.54284,
+                40.17785
+            ],
+            "distance": 2656.40387024,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:54:34Z",
+                "local": "2025-12-10T02:54:34+04:00"
+            }
+        },
+        {
+            "id": 2960630,
+            "name": "5 E.Mirzoyan street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141017,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19611,
+                "longitude": 44.50853
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.50853,
+                40.19611,
+                44.50853,
+                40.19611
+            ],
+            "distance": 2586.10009856,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:51:58Z",
+                "local": "2025-12-10T02:51:58+04:00"
+            }
+        },
+        {
+            "id": 2960631,
+            "name": "12 G.Emin street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141047,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19469,
+                "longitude": 44.50967
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.50967,
+                40.19469,
+                44.50967,
+                40.19469
+            ],
+            "distance": 2418.81059158,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-06-25T09:39:57Z",
+                "local": "2025-06-25T13:39:57+04:00"
+            }
+        },
+        {
+            "id": 2960632,
+            "name": "136/2 Verin antarayin street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141021,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19758,
+                "longitude": 44.51112
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.51112,
+                40.19758,
+                44.51112,
+                40.19758
+            ],
+            "distance": 2731.1682423,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:54:12Z",
+                "local": "2025-12-10T02:54:12+04:00"
+            }
+        },
+        {
+            "id": 2960636,
+            "name": "82/5 Aytsemnik Urartu street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141080,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.17792,
+                "longitude": 44.54339
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.54339,
+                40.17792,
+                44.54339,
+                40.17792
+            ],
+            "distance": 2703.85238223,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T23:01:57Z",
+                "local": "2025-12-10T03:01:57+04:00"
+            }
+        },
+        {
+            "id": 2960638,
+            "name": "136/2 Verin antarayin street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141073,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19815,
+                "longitude": 44.5099
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.5099,
+                40.19815,
+                44.5099,
+                40.19815
+            ],
+            "distance": 2800.08032695,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:56:20Z",
+                "local": "2025-12-10T02:56:20+04:00"
+            }
+        },
+        {
+            "id": 2960639,
+            "name": "32 Aram street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141051,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.18095,
+                "longitude": 44.51361
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.51361,
+                40.18095,
+                44.51361,
+                40.18095
+            ],
+            "distance": 889.7758768,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:51:51Z",
+                "local": "2025-12-10T02:51:51+04:00"
+            }
+        },
+        {
+            "id": 2960640,
+            "name": "1 Tsitsernakaberd street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141067,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.18192,
+                "longitude": 44.48115
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.48115,
+                40.18192,
+                44.48115,
+                40.18192
+            ],
+            "distance": 2831.97015342,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:58:45Z",
+                "local": "2025-12-10T02:58:45+04:00"
+            }
+        },
+        {
+            "id": 2960645,
+            "name": "27/3 Arshakunyats street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141068,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.15765,
+                "longitude": 44.50447
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.50447,
+                40.15765,
+                44.50447,
+                40.15765
+            ],
+            "distance": 1830.2996466,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:52:43Z",
+                "local": "2025-12-10T02:52:43+04:00"
+            }
+        },
+        {
+            "id": 2960647,
+            "name": "64/7 G.Hovsepyan street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141823,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.17419,
+                "longitude": 44.53554
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.53554,
+                40.17419,
+                44.53554,
+                40.17419
+            ],
+            "distance": 1983.92380681,
+            "datetimeFirst": {
+                "utc": "2024-07-18T18:02:20Z",
+                "local": "2024-07-18T22:02:20+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:55:38Z",
+                "local": "2025-12-10T02:55:38+04:00"
+            }
+        },
+        {
+            "id": 2960657,
+            "name": "12 G.Emin street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141048,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19441,
+                "longitude": 44.5096
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.5096,
+                40.19441,
+                44.5096,
+                40.19441
+            ],
+            "distance": 2388.42178143,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-06-25T15:50:55Z",
+                "local": "2025-06-25T19:50:55+04:00"
+            }
+        },
+        {
+            "id": 2960662,
+            "name": "64/7 G.Hovsepyan street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141040,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.17452,
+                "longitude": 44.53518
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.53518,
+                40.17452,
+                44.53518,
+                40.17452
+            ],
+            "distance": 1956.14483899,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T23:02:51Z",
+                "local": "2025-12-10T03:02:51+04:00"
+            }
+        },
+        {
+            "id": 2960664,
+            "name": "2 Tsitsernakaberd street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141057,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.1814,
+                "longitude": 44.48077
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.48077,
+                40.1814,
+                44.48077,
+                40.1814
+            ],
+            "distance": 2842.85994406,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:50:23Z",
+                "local": "2025-12-10T02:50:23+04:00"
+            }
+        },
+        {
+            "id": 2960666,
+            "name": "5 E.Mirzoyan street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141026,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19635,
+                "longitude": 44.50789
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.50789,
+                40.19635,
+                44.50789,
+                40.19635
+            ],
+            "distance": 2619.80191938,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-05-12T05:02:20Z",
+                "local": "2025-05-12T09:02:20+04:00"
+            }
+        },
+        {
+            "id": 2960667,
+            "name": "4 Tsitsernakaberd street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141023,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.18257,
+                "longitude": 44.48123
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.48123,
+                40.18257,
+                44.48123,
+                40.18257
+            ],
+            "distance": 2851.67679305,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:44:47Z",
+                "local": "2025-12-10T02:44:47+04:00"
+            }
+        },
+        {
+            "id": 2960668,
+            "name": "3 Tsitsernakaberd street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141009,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.18233,
+                "longitude": 44.48088
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.48088,
+                40.18233,
+                44.48088,
+                40.18233
+            ],
+            "distance": 2869.6377873,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T23:05:06Z",
+                "local": "2025-12-10T03:05:06+04:00"
+            }
+        },
+        {
+            "id": 2960669,
+            "name": "27/3 Arshakunyats street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141071,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.15796,
+                "longitude": 44.50491
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.50491,
+                40.15796,
+                44.50491,
+                40.15796
+            ],
+            "distance": 1784.72490825,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T23:01:30Z",
+                "local": "2025-12-10T03:01:30+04:00"
+            }
+        },
+        {
+            "id": 2960670,
+            "name": "32 Aram street, Yerevan, Armenia",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10141064,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.18123,
+                "longitude": 44.51389
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.51389,
+                40.18123,
+                44.51389,
+                40.18123
+            ],
+            "distance": 923.82303485,
+            "datetimeFirst": {
+                "utc": "2024-07-29T00:00:00Z",
+                "local": "2024-07-29T04:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:59:29Z",
+                "local": "2025-12-10T02:59:29+04:00"
+            }
+        },
+        {
+            "id": 3088326,
+            "name": "Technotun",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10803458,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.18309,
+                "longitude": 44.5364
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.5364,
+                40.18309,
+                44.5364,
+                40.18309
+            ],
+            "distance": 2338.49444347,
+            "datetimeFirst": {
+                "utc": "2024-10-01T18:01:00Z",
+                "local": "2024-10-01T22:01:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-04-18T12:00:49Z",
+                "local": "2025-04-18T16:00:49+04:00"
+            }
+        },
+        {
+            "id": 3089094,
+            "name": "Harutyun Margaryan",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 10809288,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.1941,
+                "longitude": 44.50873
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.50873,
+                40.1941,
+                44.50873,
+                40.1941
+            ],
+            "distance": 2362.55034009,
+            "datetimeFirst": {
+                "utc": "2024-10-02T06:09:07Z",
+                "local": "2024-10-02T10:09:07+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:53:38Z",
+                "local": "2025-12-10T02:53:38+04:00"
+            }
+        },
+        {
+            "id": 3313727,
+            "name": "Park residence",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 9,
+                "name": "Clarity"
+            },
+            "provider": {
+                "id": 166,
+                "name": "Clarity"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 4,
+                    "name": "Clarity Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 11634798,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.19533,
+                "longitude": 44.51245
+            },
+            "licenses": [
+                {
+                    "id": 38,
+                    "name": "CC0 1.0",
+                    "attribution": {
+                        "name": "Clarity",
+                        "url": null
+                    },
+                    "dateFrom": "2021-10-20",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.51245,
+                40.19533,
+                44.51245,
+                40.19533
+            ],
+            "distance": 2479.51532899,
+            "datetimeFirst": {
+                "utc": "2024-12-13T16:11:09Z",
+                "local": "2024-12-13T20:11:09+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-09T22:59:03Z",
+                "local": "2025-12-10T02:59:03+04:00"
+            }
+        },
+        {
+            "id": 6142544,
+            "name": "Zavaryan Street",
+            "locality": null,
+            "timezone": "Asia/Yerevan",
+            "country": {
+                "id": 70,
+                "code": "AM",
+                "name": "Armenia"
+            },
+            "owner": {
+                "id": 12,
+                "name": "AirGradient"
+            },
+            "provider": {
+                "id": 66,
+                "name": "AirGradient"
+            },
+            "isMobile": false,
+            "isMonitor": false,
+            "instruments": [
+                {
+                    "id": 7,
+                    "name": "Unknown AirGradient Sensor"
+                }
+            ],
+            "sensors": [
+                {
+                    "id": 14723109,
+                    "name": "pm1 µg/m³",
+                    "parameter": {
+                        "id": 19,
+                        "name": "pm1",
+                        "units": "µg/m³",
+                        "displayName": "PM1"
+                    }
+                },
+                {
+                    "id": 14723110,
+                    "name": "pm25 µg/m³",
+                    "parameter": {
+                        "id": 2,
+                        "name": "pm25",
+                        "units": "µg/m³",
+                        "displayName": "PM2.5"
+                    }
+                },
+                {
+                    "id": 14723111,
+                    "name": "relativehumidity %",
+                    "parameter": {
+                        "id": 98,
+                        "name": "relativehumidity",
+                        "units": "%",
+                        "displayName": "RH"
+                    }
+                },
+                {
+                    "id": 14723112,
+                    "name": "temperature c",
+                    "parameter": {
+                        "id": 100,
+                        "name": "temperature",
+                        "units": "c",
+                        "displayName": "Temperature (C)"
+                    }
+                },
+                {
+                    "id": 14723113,
+                    "name": "um003 particles/cm³",
+                    "parameter": {
+                        "id": 125,
+                        "name": "um003",
+                        "units": "particles/cm³",
+                        "displayName": "PM0.3 count"
+                    }
+                }
+            ],
+            "coordinates": {
+                "latitude": 40.166727,
+                "longitude": 44.511603
+            },
+            "licenses": [
+                {
+                    "id": 41,
+                    "name": "CC BY 4.0",
+                    "attribution": {
+                        "name": "AirGradient",
+                        "url": null
+                    },
+                    "dateFrom": "2023-07-15",
+                    "dateTo": null
+                }
+            ],
+            "bounds": [
+                44.511603,
+                40.166727,
+                44.511603,
+                40.166727
+            ],
+            "distance": 699.06652596,
+            "datetimeFirst": {
+                "utc": "2025-11-25T18:00:00Z",
+                "local": "2025-11-25T22:00:00+04:00"
+            },
+            "datetimeLast": {
+                "utc": "2025-12-10T02:00:00Z",
+                "local": "2025-12-10T06:00:00+04:00"
+            }
+        }
+    ]
+}

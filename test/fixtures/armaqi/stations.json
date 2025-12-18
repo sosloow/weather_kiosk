@@ -1,0 +1,3742 @@
+[
+  {
+    "id": 1,
+    "title": "31, Arshakuniats Avenue, Shengavit, Yerevan, 0013, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.15795856,
+    "lon": 44.50490905,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 46.53,
+      "pm10": 91.86,
+      "aqi": 128
+    }
+  },
+  {
+    "id": 3,
+    "title": "11/2, Davidashen 1st block, Դավթաշեն, Davtashen, Yerevan, 0058, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.219206,
+    "lon": 44.486441,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.73,
+      "pm10": 78.61,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 4,
+    "title": "27/3, Arshakuniats Avenue, Shengavit, Yerevan, 0013, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.15764632,
+    "lon": 44.50446935,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.48,
+      "pm10": 84.96,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 5,
+    "title": "13, Dro street, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.203171,
+    "lon": 44.541504,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.88,
+      "pm10": 77.5,
+      "aqi": 114
+    }
+  },
+  {
+    "id": 7,
+    "title": "24, Dro street, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.205636,
+    "lon": 44.544678,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.29,
+      "pm10": 77.7,
+      "aqi": 110
+    }
+  },
+  {
+    "id": 8,
+    "title": "23, David Anhaght street, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20000343,
+    "lon": 44.53647643,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.87,
+      "pm10": 79.16,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 12,
+    "title": "47, Vahe Vahyan street, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20032464,
+    "lon": 44.53688336,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.42,
+      "pm10": 82.3,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 15,
+    "title": "47, Kamaraki street 2nd lane, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.203692,
+    "lon": 44.540715,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.99,
+      "pm10": 83.85,
+      "aqi": 119
+    }
+  },
+  {
+    "id": 18,
+    "title": "40/1, Dzorapi Street, Kentron, Yerevan, 0082, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.182,
+    "lon": 44.498,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:13:48Z",
+      "temperature": 3.73918,
+      "pressure": 90167.47,
+      "humidity": 45.9123,
+      "pm2": 35.67050747732287,
+      "pm10": 34.2,
+      "aqi": 101
+    }
+  },
+  {
+    "id": 19,
+    "title": "4b, Davidashen 2nd block, Դավթաշեն, Davtashen, Yerevan, 0054, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.224,
+    "lon": 44.492,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:12:06Z",
+      "temperature": 27.86,
+      "pressure": 89670.53,
+      "humidity": 9.91,
+      "pm2": 22.329073903306547,
+      "pm10": 29.4,
+      "aqi": 76
+    }
+  },
+  {
+    "id": 23,
+    "title": "20/10, Dro street, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20529295,
+    "lon": 44.54432738,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.75,
+      "pm10": 72.4,
+      "aqi": 109
+    }
+  },
+  {
+    "id": 29,
+    "title": "13/1, Garegin Nzhdeh Street, 3th residential area, Shengavit, Yerevan, 0006, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.152,
+    "lon": 44.49,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:13:49Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.28145614463719,
+      "pm10": 43.22,
+      "aqi": 103
+    }
+  },
+  {
+    "id": 32,
+    "title": "53, Mantashyan street, 3th residential area, Shengavit, Yerevan, 0006, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.151925,
+    "lon": 44.486616,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 59.69,
+      "pm10": 115.65,
+      "aqi": 154
+    }
+  },
+  {
+    "id": 35,
+    "title": "48, Myasnikyan street, Vanadzor, Vanadzor community, Lori Province, 2021, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.80265055,
+    "lon": 44.48734512,
+    "place_id": 3,
+    "data": {
+      "timestamp": "2025-12-18T02:13:07Z",
+      "temperature": -1.81,
+      "pressure": 87573.44,
+      "humidity": 62.47,
+      "pm2": 23.52525331867096,
+      "pm10": 25.35,
+      "aqi": 78
+    }
+  },
+  {
+    "id": 37,
+    "title": "4/3, Nikoghayos Adonts street, Arabkir, Yerevan, 0014, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.21337588,
+    "lon": 44.52432901,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:12:48Z",
+      "temperature": 1.41,
+      "pressure": 88870.59,
+      "humidity": 53.35,
+      "pm2": 28.21442709197942,
+      "pm10": 27.25,
+      "aqi": 87
+    }
+  },
+  {
+    "id": 42,
+    "title": "Garegin Nzhdeh Street, 3th residential area, Shengavit, Yerevan, 0046, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.15182571,
+    "lon": 44.485872,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 52.78,
+      "pm10": 98.16,
+      "aqi": 144
+    }
+  },
+  {
+    "id": 43,
+    "title": "3, Nazaret Surenyan street, Qanaqer-Zeytun, Yerevan, 0014, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.20348944,
+    "lon": 44.5262897,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:11:51Z",
+      "temperature": 1.13,
+      "pressure": 89071.41,
+      "humidity": 57.47,
+      "pm2": 25.171639563406057,
+      "pm10": 30,
+      "aqi": 81
+    }
+  },
+  {
+    "id": 46,
+    "title": "Northern Ray 2, Arabkir, Yerevan, 0037, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.20332442,
+    "lon": 44.51700926,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:01Z",
+      "temperature": 3.48,
+      "pressure": 89151.22,
+      "humidity": 48.77,
+      "pm2": 25.975704316360815,
+      "pm10": 32.95,
+      "aqi": 82
+    }
+  },
+  {
+    "id": 53,
+    "title": "Tsitsernakaberd Highway, Kentron, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18191534,
+    "lon": 44.48115151,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.74,
+      "pm10": 80.64,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 54,
+    "title": "Tsitsernakaberd Highway, Kentron, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.181398,
+    "lon": 44.480768,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.24,
+      "pm10": 78.62,
+      "aqi": 123
+    }
+  },
+  {
+    "id": 55,
+    "title": "Tsitsernakaberd Highway, Kentron, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18233269,
+    "lon": 44.48088379,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.5,
+      "pm10": 69.06,
+      "aqi": 113
+    }
+  },
+  {
+    "id": 56,
+    "title": "Tsitsernakaberd Highway, Kentron, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18257028,
+    "lon": 44.48123197,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 0,
+      "pm10": 0,
+      "aqi": 0
+    }
+  },
+  {
+    "id": 57,
+    "title": "Arabkir, Yerevan, 0037, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.201274,
+    "lon": 44.515686,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 85.28,
+      "pm10": 128.24,
+      "aqi": 172
+    }
+  },
+  {
+    "id": 58,
+    "title": "5/1, Northern Ray, Arabkir, Yerevan, 0037, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.201072,
+    "lon": 44.515867,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 58.41,
+      "pm10": 94.52,
+      "aqi": 153
+    }
+  },
+  {
+    "id": 60,
+    "title": "19 (38/39), Nansen street, Nor Nork Block 1, Nor Norq, Yerevan, 0056, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19745,
+    "lon": 44.557409,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 23.47,
+      "pm10": 50.56,
+      "aqi": 78
+    }
+  },
+  {
+    "id": 64,
+    "title": "17, Griboyedov street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.21069034,
+    "lon": 44.51399545,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.85,
+      "pm10": 74.67,
+      "aqi": 109
+    }
+  },
+  {
+    "id": 65,
+    "title": "Rubiniants street lane, Qanaqer-Zeytun, Yerevan, 0035, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20647974,
+    "lon": 44.55281259,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.98,
+      "pm10": 76.09,
+      "aqi": 105
+    }
+  },
+  {
+    "id": 66,
+    "title": "22/1, Admiral Isakov Avenue, Malatia-Sebastia, Yerevan, 0086, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.1577006,
+    "lon": 44.46106959,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.08,
+      "pm10": 81.09,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 67,
+    "title": "136/6, Verin Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19757584,
+    "lon": 44.51112269,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.33,
+      "pm10": 80.05,
+      "aqi": 120
+    }
+  },
+  {
+    "id": 68,
+    "title": "24/7, Admiral Isakov Avenue, Malatia-Sebastia, Yerevan, 0086, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.15757547,
+    "lon": 44.45989414,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.43,
+      "pm10": 74.67,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 69,
+    "title": "136/2, Verin Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.198153,
+    "lon": 44.509898,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.64,
+      "pm10": 68.89,
+      "aqi": 109
+    }
+  },
+  {
+    "id": 70,
+    "title": "Leonid Azgaldyan street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19610524,
+    "lon": 44.50853,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.5,
+      "pm10": 74.76,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 72,
+    "title": "21/20, Leningradyan street, Ajapnyak, Yerevan, 0099, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18960546,
+    "lon": 44.47151674,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.05,
+      "pm10": 78.05,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 73,
+    "title": "64/7, Garegin Hovsepyan Street, Norq Marash, Yerevan, 0047, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.174524,
+    "lon": 44.53518,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 3.64,
+      "pm10": 2.55,
+      "aqi": 20
+    }
+  },
+  {
+    "id": 74,
+    "title": "21/20, Leningradyan street, Ajapnyak, Yerevan, 0099, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18906332,
+    "lon": 44.47200087,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.42,
+      "pm10": 74.27,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 75,
+    "title": "8, Teryan street, Kentron, Yerevan, 0010, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.180954,
+    "lon": 44.51360842,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 45.04,
+      "pm10": 80.83,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 76,
+    "title": "15a, Pushkin Street, Kentron, Yerevan, 0001, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18123,
+    "lon": 44.513889,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.68,
+      "pm10": 67.8,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 80,
+    "title": "20/2, Derenik Demirchyan street, Kentron, Yerevan, 0002, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.188695,
+    "lon": 44.507454,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.89,
+      "pm10": 73.47,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 81,
+    "title": "Passport and Visa Department of RA, 17/10, Davidashen 4th block, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.219682,
+    "lon": 44.496958,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.61,
+      "pm10": 73.04,
+      "aqi": 109
+    }
+  },
+  {
+    "id": 82,
+    "title": "22, Derenik Demirchyan street, Kentron, Yerevan, 0002, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18868,
+    "lon": 44.506769,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.06,
+      "pm10": 83.7,
+      "aqi": 120
+    }
+  },
+  {
+    "id": 84,
+    "title": "Gevorg Emin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.193874,
+    "lon": 44.510538,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.94,
+      "pm10": 71.55,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 85,
+    "title": "Pirumyanner street, Դավթաշեն, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.219706,
+    "lon": 44.49609,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.07,
+      "pm10": 68.75,
+      "aqi": 102
+    }
+  },
+  {
+    "id": 86,
+    "title": "22/16, Halabyan Street, Աջափնյակ, Ajapnyak, Yerevan, 0036, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20120456,
+    "lon": 44.4802821,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 3.08,
+      "pm10": 0.96,
+      "aqi": 17
+    }
+  },
+  {
+    "id": 87,
+    "title": "22/16, Halabyan Street, Աջափնյակ, Ajapnyak, Yerevan, 0036, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20105148,
+    "lon": 44.47991005,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 33.39,
+      "pm10": 61.89,
+      "aqi": 96
+    }
+  },
+  {
+    "id": 91,
+    "title": "160, Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19421204,
+    "lon": 44.50874282,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.2,
+      "pm10": 78.63,
+      "aqi": 120
+    }
+  },
+  {
+    "id": 93,
+    "title": "127/1, Verin Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19567793,
+    "lon": 44.51227551,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.12,
+      "pm10": 81.69,
+      "aqi": 120
+    }
+  },
+  {
+    "id": 94,
+    "title": "146/1, Verin Antarayin street, Kentron, Yerevan, 0009, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19532955,
+    "lon": 44.51244829,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.31,
+      "pm10": 82.08,
+      "aqi": 123
+    }
+  },
+  {
+    "id": 97,
+    "title": "Tsitsernakaberd Highway, Kilikia, Kentron, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.17972747,
+    "lon": 44.48422029,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 28.14,
+      "pm10": 51.42,
+      "aqi": 86
+    }
+  },
+  {
+    "id": 101,
+    "title": "Ulnetsi - Rubinyants highway, Qanaqer-Zeytun, Yerevan, 0011, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.201018,
+    "lon": 44.53234,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.15,
+      "pm10": 77.77,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 104,
+    "title": "David Anhaght street, Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20176486,
+    "lon": 44.53260286,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 28.22,
+      "pm10": 54.83,
+      "aqi": 87
+    }
+  },
+  {
+    "id": 111,
+    "title": "2, Grigor Hasratyan street, Աջափնյակ, Ajapnyak, Yerevan, 0031, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.195894,
+    "lon": 44.46205,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.72,
+      "pm10": 79.45,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 112,
+    "title": "2, Grigor Hasratyan street, Աջափնյակ, Ajapnyak, Yerevan, 0031, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.195849,
+    "lon": 44.461971,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.55,
+      "pm10": 63.37,
+      "aqi": 104
+    }
+  },
+  {
+    "id": 113,
+    "title": "Hakob Paronyan street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.180281,
+    "lon": 44.499183,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.75,
+      "pm10": 73.37,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 115,
+    "title": "Manuk Abeghyan street, Kentron, Yerevan, 0025, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.178973,
+    "lon": 44.525809,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.95,
+      "pm10": 83.8,
+      "aqi": 122
+    }
+  },
+  {
+    "id": 117,
+    "title": "Manuk Abeghyan street, Kentron, Yerevan, 0025, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.179055,
+    "lon": 44.525881,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.76,
+      "pm10": 80.96,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 118,
+    "title": "37/1, Hrachya Acharyan street, Avan, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.229663,
+    "lon": 44.556577,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.12,
+      "pm10": 67.96,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 119,
+    "title": "Avan, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.23007,
+    "lon": 44.556424,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.39,
+      "pm10": 82.91,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 120,
+    "title": "14, Gyurjyan street, Nor Nork Block 6, Nor Norq, Yerevan, 0056, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.187989,
+    "lon": 44.555432,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 34.85,
+      "pm10": 68.04,
+      "aqi": 99
+    }
+  },
+  {
+    "id": 121,
+    "title": "7, Khanjyan street, Kentron, Yerevan, 0010, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.17403294,
+    "lon": 44.51631577,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.22,
+      "pm10": 75.22,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 122,
+    "title": "7/4, Khanjyan street, Kentron, Yerevan, 0010, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.17416285,
+    "lon": 44.516232,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.05,
+      "pm10": 73.56,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 124,
+    "title": "180, Norqi Ayginer street, Norq Marash, Yerevan, 0047, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18309529,
+    "lon": 44.53630276,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.36,
+      "pm10": 75.4,
+      "aqi": 111
+    }
+  },
+  {
+    "id": 126,
+    "title": "3/2, Nikoghayos Tigranyan street, Arabkir, Yerevan, 0014, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.213233,
+    "lon": 44.518601,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.01,
+      "pm10": 76.47,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 128,
+    "title": "Team Telecom Armenia, 2, Avetis Aharonyan street, Qanaqer-Zeytun, Yerevan, 0014, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.2075163,
+    "lon": 44.53279015,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.17,
+      "pm10": 76.95,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 129,
+    "title": "Team Telecom Armenia, 2, Avetis Aharonyan street, Qanaqer-Zeytun, Yerevan, 0014, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20790828,
+    "lon": 44.532404,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.55,
+      "pm10": 81.17,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 130,
+    "title": "18, Davit Hovhannes street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.202092,
+    "lon": 44.508796,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.86,
+      "pm10": 80.66,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 131,
+    "title": "Riga street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.201929,
+    "lon": 44.508619,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.02,
+      "pm10": 56.43,
+      "aqi": 102
+    }
+  },
+  {
+    "id": 134,
+    "title": "11/4, Arshakuniats Avenue, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.166703,
+    "lon": 44.506554,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.7,
+      "pm10": 78.29,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 136,
+    "title": "12/5, Sevan street, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.1666896,
+    "lon": 44.50823365,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 48.65,
+      "pm10": 89.03,
+      "aqi": 133
+    }
+  },
+  {
+    "id": 138,
+    "title": "29/1, Orbeli Brothers Street, Arabkir, Yerevan, 0028, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.193519,
+    "lon": 44.493397,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.2,
+      "pm10": 77.7,
+      "aqi": 120
+    }
+  },
+  {
+    "id": 139,
+    "title": "69/4, Aygedzor street, Aygedzor, Arabkir, Yerevan, 0033, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19276785,
+    "lon": 44.496073,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.82,
+      "pm10": 83.69,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 147,
+    "title": "7, Gevorg Emin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.194708,
+    "lon": 44.509532,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 6.07,
+      "pm10": 6.1,
+      "aqi": 34
+    }
+  },
+  {
+    "id": 148,
+    "title": "7, Gevorg Emin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.194601,
+    "lon": 44.509852,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.56,
+      "pm10": 68.76,
+      "aqi": 111
+    }
+  },
+  {
+    "id": 149,
+    "title": "Davidashen 4th block, Davtashen, Zovuni, Nairi community, Kotayk Province, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.227134,
+    "lon": 44.498699,
+    "place_id": 7,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 32.95,
+      "pm10": 61.63,
+      "aqi": 95
+    }
+  },
+  {
+    "id": 150,
+    "title": "Davidashen 4th block, Davtashen, Zovuni, Nairi community, Kotayk Province, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.226542,
+    "lon": 44.499558,
+    "place_id": 7,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 4.98,
+      "pm10": 4.9,
+      "aqi": 28
+    }
+  },
+  {
+    "id": 152,
+    "title": "Նոր Շենգավիթ, 31/2, Hayk Hovsepyan street, 3th residential area, Shengavit, Yerevan, 0046, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.147693,
+    "lon": 44.479588,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 59.45,
+      "pm10": 108.44,
+      "aqi": 154
+    }
+  },
+  {
+    "id": 155,
+    "title": "160, Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.194102,
+    "lon": 44.508729,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 45.02,
+      "pm10": 79.65,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 157,
+    "title": "64/7, Garegin Hovsepyan Street, Norq Marash, Yerevan, 0047, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.174193,
+    "lon": 44.53554041,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 21.43,
+      "pm10": 41.01,
+      "aqi": 74
+    }
+  },
+  {
+    "id": 159,
+    "title": "111, Yeghvard highway, Դավթաշեն, Davtashen, Yerevan, Nairi community, Kotayk Province, 0024, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.228586,
+    "lon": 44.504157,
+    "place_id": 6,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 34.21,
+      "pm10": 64.55,
+      "aqi": 98
+    }
+  },
+  {
+    "id": 160,
+    "title": "109/8 3-րդ մասնաշենք, Anastas Mikoyan street, Դավթաշեն, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.22769341,
+    "lon": 44.50321,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.14,
+      "pm10": 83.31,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 161,
+    "title": "27/19, Rubiniants street, Qanaqer-Zeytun, Yerevan, 0035, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.20587,
+    "lon": 44.552834,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 34.62,
+      "pm10": 68.14,
+      "aqi": 99
+    }
+  },
+  {
+    "id": 162,
+    "title": "7, Pirumyanner street, Դավթաշեն, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.22035921,
+    "lon": 44.49553396,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 32.95,
+      "pm10": 57.09,
+      "aqi": 95
+    }
+  },
+  {
+    "id": 163,
+    "title": "Pirumyanner street, Դավթաշեն, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.220032,
+    "lon": 44.496169,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.31,
+      "pm10": 79.85,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 165,
+    "title": "7, Maro Margaryan street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.199928,
+    "lon": 44.509661,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 8.17,
+      "pm10": 11.47,
+      "aqi": 45
+    }
+  },
+  {
+    "id": 171,
+    "title": "21/1, Dzoragyugh street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.178361,
+    "lon": 44.500135,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.57,
+      "pm10": 75.4,
+      "aqi": 113
+    }
+  },
+  {
+    "id": 172,
+    "title": "4, Dzoragyugh street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.177913,
+    "lon": 44.500317,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 12.18,
+      "pm10": 19.47,
+      "aqi": 57
+    }
+  },
+  {
+    "id": 173,
+    "title": "39, Israyelyan street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.178387,
+    "lon": 44.501193,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.53,
+      "pm10": 77.8,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 174,
+    "title": "39, Israyelyan street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.178392,
+    "lon": 44.501001,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.84,
+      "pm10": 72.48,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 177,
+    "title": "Tigran Mets avenue, Kentron, Yerevan, 0010, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.174153,
+    "lon": 44.514431,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.72,
+      "pm10": 81.99,
+      "aqi": 119
+    }
+  },
+  {
+    "id": 178,
+    "title": "6, Ferdowsi street, Kentron, Yerevan, 0010, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.174953,
+    "lon": 44.514403,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.03,
+      "pm10": 66.4,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 179,
+    "title": "27/8, Leningradyan street, Ajapnyak, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189968,
+    "lon": 44.473776,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 35.59,
+      "pm10": 56.15,
+      "aqi": 101
+    }
+  },
+  {
+    "id": 180,
+    "title": "27/7, Leningradyan street, Ajapnyak, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189413,
+    "lon": 44.47347,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.55,
+      "pm10": 69.94,
+      "aqi": 111
+    }
+  },
+  {
+    "id": 184,
+    "title": "Ashot Hovhannisyan street, Nor Nork Block 4, Nor Norq, Yerevan, 0076, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.193365,
+    "lon": 44.57405,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 21.38,
+      "pm10": 42.06,
+      "aqi": 74
+    }
+  },
+  {
+    "id": 185,
+    "title": "1/2, Tsitsernakaberd Highway, Kilikia, Kentron, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.177805,
+    "lon": 44.48915,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.68,
+      "pm10": 69.69,
+      "aqi": 119
+    }
+  },
+  {
+    "id": 186,
+    "title": "1/2, Tsitsernakaberd Highway, Kilikia, Kentron, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.177902,
+    "lon": 44.48874,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.71,
+      "pm10": 74.09,
+      "aqi": 119
+    }
+  },
+  {
+    "id": 188,
+    "title": "2a, Mesrop Mashtots Avenue, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.175789,
+    "lon": 44.502492,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 46.02,
+      "pm10": 84.23,
+      "aqi": 127
+    }
+  },
+  {
+    "id": 189,
+    "title": "Tsitsernakaberd Highway, Kentron, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.180812,
+    "lon": 44.481288,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.59,
+      "pm10": 78.09,
+      "aqi": 123
+    }
+  },
+  {
+    "id": 190,
+    "title": "1, Nor Aresh 27th street, Nor Aresh, Erebuni, Yerevan, 0020, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.139712,
+    "lon": 44.526841,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 33.12,
+      "pm10": 64.34,
+      "aqi": 96
+    }
+  },
+  {
+    "id": 191,
+    "title": "18/5, Arshakuniats Avenue, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.166494,
+    "lon": 44.503233,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.95,
+      "pm10": 79.09,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 192,
+    "title": "Dilijan, near Tigran Metz Market",
+    "type": "armaqi",
+    "lat": 40.753,
+    "lon": 44.895,
+    "place_id": 5,
+    "data": {
+      "timestamp": "2025-12-18T02:13:54.509Z",
+      "temperature": -0.01,
+      "pressure": 88735.63,
+      "humidity": 54.05,
+      "pm2": 10.890210235718836,
+      "pm10": 12.68,
+      "aqi": 54
+    }
+  },
+  {
+    "id": 194,
+    "title": "10, Nersisyan lane, Dimats, Vanadzor, Vanadzor community, Lori Province, 2017, Armenia",
+    "type": "armaqi",
+    "lat": 40.797,
+    "lon": 44.512,
+    "place_id": 3,
+    "data": {
+      "timestamp": "2025-12-18T02:15:02.426Z",
+      "temperature": -2.53,
+      "pressure": 87064.38,
+      "humidity": 68.71,
+      "pm2": 30.627678346357452,
+      "pm10": 31.25,
+      "aqi": 91
+    }
+  },
+  {
+    "id": 195,
+    "title": "24, улица Банаки, Ванадзор, Ванадзорская община, Лорийская область, 2021, Армения",
+    "type": "armaqi",
+    "lat": 40.8030914,
+    "lon": 44.4895929,
+    "place_id": 3,
+    "data": {
+      "timestamp": "2025-12-18T02:13:07.762Z",
+      "temperature": -1.81,
+      "pressure": 87573.44,
+      "humidity": 62.47,
+      "pm2": 23.52525331867096,
+      "pm10": 25.35,
+      "aqi": 78
+    }
+  },
+  {
+    "id": 199,
+    "title": "85, улица София, Нор Ареш, Эребуни, Ереван, 0020, Армения",
+    "type": "armaqi",
+    "lat": 40.135866,
+    "lon": 44.524388,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:55.55Z",
+      "temperature": 1.24,
+      "pressure": 91769.59,
+      "humidity": 76.94,
+      "pm2": 33.073833182027336,
+      "pm10": 39.1,
+      "aqi": 96
+    }
+  },
+  {
+    "id": 209,
+    "title": "3, Arshakuniats Avenue 1st Lane, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.16615888,
+    "lon": 44.50265997,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.26,
+      "pm10": 77.3,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 210,
+    "title": "4/4, Nor Aresh 27th street, Nor Aresh, Erebuni, Yerevan, 0020, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.13959918,
+    "lon": 44.52680113,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 31.93,
+      "pm10": 62.48,
+      "aqi": 94
+    }
+  },
+  {
+    "id": 229,
+    "title": "43/4, Moldovakan street, Bagrevand, Nor Norq, Yerevan, 0062, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.1988803,
+    "lon": 44.57414213,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:11:35Z",
+      "temperature": 1.27,
+      "pressure": 87518.5,
+      "humidity": 57.26,
+      "pm2": 29.56835900361286,
+      "pm10": 34.95,
+      "aqi": 89
+    }
+  },
+  {
+    "id": 236,
+    "title": "2/3, Mesrop Mashtots Avenue, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.175078,
+    "lon": 44.502197,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 45.01,
+      "pm10": 82.23,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 237,
+    "title": "11/10, Argishti street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.171361,
+    "lon": 44.503418,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.39,
+      "pm10": 70.95,
+      "aqi": 113
+    }
+  },
+  {
+    "id": 238,
+    "title": "7/12, Argishti street, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.171081,
+    "lon": 44.503384,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 52.91,
+      "pm10": 100.27,
+      "aqi": 144
+    }
+  },
+  {
+    "id": 245,
+    "title": "34, улица Толбухина, Арабкир, Ереван, 0014, Армения",
+    "type": "armaqi",
+    "lat": 40.21080775,
+    "lon": 44.5221741,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:15:00.688Z",
+      "temperature": 3.03,
+      "pressure": 89044.72,
+      "humidity": 48.55,
+      "pm2": 25.085696478653787,
+      "pm10": 30.52,
+      "aqi": 81
+    }
+  },
+  {
+    "id": 247,
+    "title": "48, Ной микрорайон, Ереван, 0065, Армения",
+    "type": "armaqi",
+    "lat": 40.185175,
+    "lon": 44.465895,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:34.727Z",
+      "temperature": 1.8,
+      "pressure": 91405.69,
+      "humidity": 52.17,
+      "pm2": 23.82197242010326,
+      "pm10": 25.23,
+      "aqi": 78
+    }
+  },
+  {
+    "id": 250,
+    "title": "27/7, Admiral Isakov Avenue, Malatia-Sebastia, Yerevan, 0068, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.158068,
+    "lon": 44.464461,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.21,
+      "pm10": 68,
+      "aqi": 105
+    }
+  },
+  {
+    "id": 252,
+    "title": "64, 4th microdistrict, Abovyan, Abovyan community, Kotayk Province, 2206, Armenia",
+    "type": "armaqi",
+    "lat": 40.282802,
+    "lon": 44.639276,
+    "place_id": 8,
+    "data": {
+      "timestamp": "2025-12-18T02:14:57.509Z",
+      "temperature": 0.59,
+      "pressure": 86504.78,
+      "humidity": 51.98,
+      "pm2": 21.529201666776903,
+      "pm10": 24.1,
+      "aqi": 74
+    }
+  },
+  {
+    "id": 253,
+    "title": "12, Saralanj Street, Dilijan, Dilijan community, Tavush Province, 3905, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.74455248,
+    "lon": 44.83428043,
+    "place_id": 5,
+    "data": {
+      "timestamp": "2025-12-18T02:12:43Z",
+      "temperature": -0.2,
+      "pressure": 87240.16,
+      "humidity": 50.53,
+      "pm2": 6.03921568627451,
+      "pm10": 9.3,
+      "aqi": 34
+    }
+  },
+  {
+    "id": 254,
+    "title": "Agarak-Oshakan Highway, Agarak, Ashtarak community, Aragatsotn Province, 0213, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.308,
+    "lon": 44.272,
+    "place_id": 9,
+    "data": {
+      "timestamp": "2025-12-18T02:13:43Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 15.91692498450093,
+      "pm10": 18.02,
+      "aqi": 64
+    }
+  },
+  {
+    "id": 258,
+    "title": "39, улица Чехова, 3-րդ մաս, Шенгавит, Ереван, 0039, Армения",
+    "type": "armaqi",
+    "lat": 40.1498302,
+    "lon": 44.4752662,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:13:34.364Z",
+      "temperature": 4.11,
+      "pressure": 92155.97,
+      "humidity": 54.49,
+      "pm2": 30.3030303030303,
+      "pm10": 34.25,
+      "aqi": 91
+    }
+  },
+  {
+    "id": 261,
+    "title": "26/1, Azatutyan Avenue, Qanaqer-Zeytun, Yerevan, 0014, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.210632,
+    "lon": 44.531128,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 15.64,
+      "pm10": 27.13,
+      "aqi": 63
+    }
+  },
+  {
+    "id": 262,
+    "title": "42, улица Пушкина, Кентрон, Ереван, 0002, Армения",
+    "type": "armaqi",
+    "lat": 40.183072,
+    "lon": 44.512341,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:38.185Z",
+      "temperature": 3.49,
+      "pressure": 91461.56,
+      "humidity": 49.53,
+      "pm2": 33.812236809512015,
+      "pm10": 41.08,
+      "aqi": 97
+    }
+  },
+  {
+    "id": 263,
+    "title": "36, Mushegh Galshoyan street, Nor Nork Block 5, Nor Norq, Yerevan, 0079, Armenia",
+    "type": "armaqi",
+    "lat": 40.17942,
+    "lon": 44.566576,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:38.179Z",
+      "temperature": 2.21,
+      "pressure": 87339.25,
+      "humidity": 53.2,
+      "pm2": 25.634386328327288,
+      "pm10": 26.2,
+      "aqi": 82
+    }
+  },
+  {
+    "id": 266,
+    "title": "Nor Tun, 286/6, Davit Bek street, Nor Nork Block 7, Nor Norq, Yerevan, 0092, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.183159,
+    "lon": 44.562909,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 32.9,
+      "pm10": 65.97,
+      "aqi": 95
+    }
+  },
+  {
+    "id": 267,
+    "title": "Nor Tun, 286/6, Davit Bek street, Nor Nork Block 7, Nor Norq, Yerevan, 0092, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.183174,
+    "lon": 44.562875,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 30.26,
+      "pm10": 59.79,
+      "aqi": 90
+    }
+  },
+  {
+    "id": 268,
+    "title": "Gohar Gasparyan street, Kentron, Yerevan, 0009, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.193626,
+    "lon": 44.514099,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 3.93,
+      "pm10": 2.72,
+      "aqi": 22
+    }
+  },
+  {
+    "id": 269,
+    "title": "122/8, Verin Antarayin street, Kentron, Yerevan, 0009, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.194121,
+    "lon": 44.513815,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.9,
+      "pm10": 69.74,
+      "aqi": 114
+    }
+  },
+  {
+    "id": 277,
+    "title": "Green Green, 6A, улица Бабаяна, Канакер-Зейтун, Ереван, 0037, Армения",
+    "type": "armaqi",
+    "lat": 40.1981162,
+    "lon": 44.5212623,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:48:47.184Z",
+      "temperature": 3.92,
+      "pressure": 90001.13,
+      "humidity": 52.16,
+      "pm2": 39.9633923123856,
+      "pm10": 40.05,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 278,
+    "title": "Армения, Гюмри, Ани квартал, улица Паруйра Севака",
+    "type": "armaqi",
+    "lat": 40.829,
+    "lon": 43.831,
+    "place_id": 11,
+    "data": {
+      "timestamp": "2025-12-18T02:14:00.658Z",
+      "temperature": 0.49,
+      "pressure": 84979.31,
+      "humidity": 47.38,
+      "pm2": 18.183673469387756,
+      "pm10": 17.83,
+      "aqi": 68
+    }
+  },
+  {
+    "id": 281,
+    "title": "55, Qeri street, Arabkir, Yerevan, 0028, Armenia",
+    "type": "armaqi",
+    "lat": 40.201,
+    "lon": 44.487,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:13:59.549Z",
+      "temperature": 2.76,
+      "pressure": 90835.19,
+      "humidity": 52.46,
+      "pm2": 26.4514798391255,
+      "pm10": 26.75,
+      "aqi": 83
+    }
+  },
+  {
+    "id": 282,
+    "title": "15, Nairi Zaryan street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.204893,
+    "lon": 44.510939,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.21,
+      "pm10": 72.97,
+      "aqi": 113
+    }
+  },
+  {
+    "id": 283,
+    "title": "15, Nairi Zaryan street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.204802,
+    "lon": 44.510595,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 45.35,
+      "pm10": 82.02,
+      "aqi": 125
+    }
+  },
+  {
+    "id": 287,
+    "title": "43, Nikol Duman street, Arabkir, Yerevan, 0028, Armenia",
+    "type": "armaqi",
+    "lat": 40.201,
+    "lon": 44.488,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:45.132Z",
+      "temperature": 1.14,
+      "pressure": 90515.13,
+      "humidity": 55.19,
+      "pm2": 30.189132165102148,
+      "pm10": 34.1,
+      "aqi": 90
+    }
+  },
+  {
+    "id": 289,
+    "title": "Kino Yerevan - Կինօ Երեւան",
+    "type": "armaqi",
+    "lat": 40.175409,
+    "lon": 44.513788,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:29:49.622Z",
+      "temperature": 3.69,
+      "pressure": 91464.78,
+      "humidity": 49.25,
+      "pm2": 34.54464715242572,
+      "pm10": 41.05,
+      "aqi": 98
+    }
+  },
+  {
+    "id": 291,
+    "title": "1, улица Арама Хачатуряна, Арабкир, Ереван, 0033, Армения",
+    "type": "armaqi",
+    "lat": 40.202579,
+    "lon": 44.491031,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:15:06.965Z",
+      "temperature": 3.49,
+      "pressure": 90353.38,
+      "humidity": 66.98,
+      "pm2": 28.41380190063142,
+      "pm10": 29.7,
+      "aqi": 87
+    }
+  },
+  {
+    "id": 292,
+    "title": "15, улица Арама Хачатуряна, Арабкир, Ереван, 0012, Армения",
+    "type": "armaqi",
+    "lat": 40.205249,
+    "lon": 44.498138,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:43.269Z",
+      "temperature": 5.36,
+      "pressure": 90209.22,
+      "humidity": 43.71,
+      "pm2": 26.95857866454118,
+      "pm10": 33.3,
+      "aqi": 84
+    }
+  },
+  {
+    "id": 293,
+    "title": "Embassy of the People's Republic of China in Armenia, Admiral Isakov Avenue, Malatia-Sebastia, Yerevan, 0068, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.158154,
+    "lon": 44.464906,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.54,
+      "pm10": 70.46,
+      "aqi": 106
+    }
+  },
+  {
+    "id": 294,
+    "title": "6/2, улица Чайковского, Гюмри, Ширакская область, 3103, Армения",
+    "type": "armaqi",
+    "lat": 40.804971,
+    "lon": 43.853293,
+    "place_id": 2,
+    "data": {
+      "timestamp": "2025-12-18T02:14:38.59Z",
+      "temperature": -5.46,
+      "pressure": 85413.09,
+      "humidity": 70.7,
+      "pm2": 25.83932543582846,
+      "pm10": 27.98,
+      "aqi": 82
+    }
+  },
+  {
+    "id": 295,
+    "title": "27, проспект Саят-Нова, Кентрон, Ереван, 0001, Армения",
+    "type": "armaqi",
+    "lat": 40.182006,
+    "lon": 44.521536,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:33.292Z",
+      "temperature": 2.25,
+      "pressure": 91198.19,
+      "humidity": 54.05,
+      "pm2": 18.513342839682213,
+      "pm10": 12.95,
+      "aqi": 69
+    }
+  },
+  {
+    "id": 296,
+    "title": "26/1, Azatutyan Avenue, Qanaqer-Zeytun, Yerevan, 0014, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.210914,
+    "lon": 44.531371,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 34.25,
+      "pm10": 65.81,
+      "aqi": 98
+    }
+  },
+  {
+    "id": 297,
+    "title": "3/3, улица Себастия, Աջափնյակ, Малатия-Себастия, Ереван, 0031, Армения",
+    "type": "armaqi",
+    "lat": 40.189,
+    "lon": 44.463,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:15:31.978Z",
+      "temperature": 3.75,
+      "pressure": 91180.41,
+      "humidity": 48.88,
+      "pm2": 35.67050747732287,
+      "pm10": 47.78,
+      "aqi": 101
+    }
+  },
+  {
+    "id": 298,
+    "title": "Almati street, Avan, Yerevan, 0060, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.219126,
+    "lon": 44.57548185,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 61.04,
+      "pm10": 120.36,
+      "aqi": 155
+    }
+  },
+  {
+    "id": 306,
+    "title": "104/1, Sevan street, Shengavit, Yerevan, 0026, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.15319,
+    "lon": 44.504287,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.3,
+      "pm10": 82.74,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 307,
+    "title": "Monte Melkonian avenue, Malatia-Sebastia, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.18135,
+    "lon": 44.479177,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.19,
+      "pm10": 72.21,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 308,
+    "title": "Monte Melkonian avenue, Malatia-Sebastia, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.180621,
+    "lon": 44.479755,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 33.75,
+      "pm10": 62,
+      "aqi": 97
+    }
+  },
+  {
+    "id": 309,
+    "title": "23, Verin Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.196332,
+    "lon": 44.507883,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.38,
+      "pm10": 71.1,
+      "aqi": 111
+    }
+  },
+  {
+    "id": 310,
+    "title": "31/1, Hayk Hovsepyan street, 3th residential area, Shengavit, Yerevan, 0046, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.147822,
+    "lon": 44.480929,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.71,
+      "pm10": 78.54,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 311,
+    "title": "Hrazdan Gorge Aqueduct, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.17912,
+    "lon": 44.499216,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.26,
+      "pm10": 83.35,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 316,
+    "title": "Booop",
+    "type": "armaqi",
+    "lat": 40.149,
+    "lon": 44.48,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:36.487Z",
+      "temperature": 21.95,
+      "pressure": 91449.44,
+      "humidity": 30.48,
+      "pm2": 25.83932543582846,
+      "pm10": 25.7,
+      "aqi": 82
+    }
+  },
+  {
+    "id": 318,
+    "title": "Сурб Григора Лусаворича 12/10",
+    "type": "armaqi",
+    "lat": 40.177,
+    "lon": 44.504,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:13:30.174Z",
+      "temperature": 4.68,
+      "pressure": 91704.69,
+      "humidity": 48.42,
+      "pm2": 35.56316002502116,
+      "pm10": 42.72,
+      "aqi": 101
+    }
+  },
+  {
+    "id": 319,
+    "title": "Vanadzor community, Lori Province, 2030, Armenia",
+    "type": "data.sensor.community",
+    "lat": 40.83616677,
+    "lon": 44.42710361,
+    "place_id": 14,
+    "data": {
+      "timestamp": "2025-12-18T02:12:32Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 9.63014430785676,
+      "pm10": 6.78,
+      "aqi": 52
+    }
+  },
+  {
+    "id": 320,
+    "title": "8/2, Arzoumanian Street, Ajapnyak, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.194505,
+    "lon": 44.476334,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.28,
+      "pm10": 67.21,
+      "aqi": 105
+    }
+  },
+  {
+    "id": 321,
+    "title": "Tsitsernakaberd Highway, Kilikia, Kentron, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.179722,
+    "lon": 44.484982,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 45.4,
+      "pm10": 81.48,
+      "aqi": 125
+    }
+  },
+  {
+    "id": 322,
+    "title": "8Ա, Arzoumanian Street, Ajapnyak, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19419538,
+    "lon": 44.476471,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.09,
+      "pm10": 60.11,
+      "aqi": 102
+    }
+  },
+  {
+    "id": 324,
+    "title": "31, Hrachya Acharyan street, Avan, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.223488,
+    "lon": 44.552196,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.98,
+      "pm10": 86.1,
+      "aqi": 119
+    }
+  },
+  {
+    "id": 325,
+    "title": "193/2, Norqi Ayginer street, Norq Marash, Yerevan, 0047, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.179642,
+    "lon": 44.53731,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 34.25,
+      "pm10": 70.02,
+      "aqi": 98
+    }
+  },
+  {
+    "id": 326,
+    "title": "Norqi Ayginer street, Norq Marash, Yerevan, 0047, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.180042,
+    "lon": 44.536053,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.02,
+      "pm10": 80.89,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 327,
+    "title": "18, Avet Avetisyan Street, Arabkir, Yerevan, 0033, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.196382,
+    "lon": 44.497054,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.51,
+      "pm10": 69.33,
+      "aqi": 108
+    }
+  },
+  {
+    "id": 328,
+    "title": "20, Avet Avetisyan Street, Arabkir, Yerevan, 0033, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.196719,
+    "lon": 44.497019,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.23,
+      "pm10": 76.84,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 329,
+    "title": "17, Griboyedov street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.21145,
+    "lon": 44.512839,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.58,
+      "pm10": 78.48,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 330,
+    "title": "Nor Norq, Yerevan, Jrvej, Jrvezh community, Kotayk Province, 0089, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189596,
+    "lon": 44.596197,
+    "place_id": 6,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 30.54,
+      "pm10": 64.3,
+      "aqi": 91
+    }
+  },
+  {
+    "id": 331,
+    "title": "Nor Norq, Yerevan, Jrvej, Jrvezh community, Kotayk Province, 0089, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189318,
+    "lon": 44.595999,
+    "place_id": 6,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 30.28,
+      "pm10": 63.88,
+      "aqi": 90
+    }
+  },
+  {
+    "id": 332,
+    "title": "116, Sevan street, Shengavit, Yerevan, 0026, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.15162,
+    "lon": 44.503721,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 51.71,
+      "pm10": 110.84,
+      "aqi": 141
+    }
+  },
+  {
+    "id": 333,
+    "title": "20, Aygedzor street, Aygedzor, Arabkir, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19174,
+    "lon": 44.502114,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.74,
+      "pm10": 0,
+      "aqi": 107
+    }
+  },
+  {
+    "id": 334,
+    "title": "41/4, Marshal Baghramyan avenue, Arabkir, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.192131,
+    "lon": 44.502135,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.31,
+      "pm10": 0,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 335,
+    "title": "Qanaqer-Zeytun, Yerevan, 0069, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.209026,
+    "lon": 44.535585,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.71,
+      "pm10": 0,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 336,
+    "title": "7, Paruyr Sevak street, Qanaqer-Zeytun, Yerevan, 0014, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.209,
+    "lon": 44.53531,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.82,
+      "pm10": 0,
+      "aqi": 104
+    }
+  },
+  {
+    "id": 337,
+    "title": "Ashot Hovhannisyan street, Nor Nork Block 4, Nor Norq, Yerevan, 0076, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.192423,
+    "lon": 44.575337,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 28.13,
+      "pm10": 60.44,
+      "aqi": 86
+    }
+  },
+  {
+    "id": 339,
+    "title": "11/2, Davidashen 1st block, Davtashen, Yerevan, 0058, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.218523,
+    "lon": 44.48664,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.41,
+      "pm10": 63.27,
+      "aqi": 103
+    }
+  },
+  {
+    "id": 340,
+    "title": "103/4, Davit Bek street, Nor Nork Block 7, Nor Norq, Yerevan, 0092, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.170068,
+    "lon": 44.548905,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 27.35,
+      "pm10": 51.96,
+      "aqi": 85
+    }
+  },
+  {
+    "id": 341,
+    "title": "3, Davidashen 1st block, Davtashen, Yerevan, 0058, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.218694,
+    "lon": 44.486904,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.77,
+      "pm10": 72.75,
+      "aqi": 114
+    }
+  },
+  {
+    "id": 342,
+    "title": "19/62, Hrachya Acharyan street, Avan, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.223751,
+    "lon": 44.551438,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.08,
+      "pm10": 80.92,
+      "aqi": 115
+    }
+  },
+  {
+    "id": 343,
+    "title": "12, Sevan street, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.166025,
+    "lon": 44.507121,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 49.61,
+      "pm10": 86.69,
+      "aqi": 136
+    }
+  },
+  {
+    "id": 344,
+    "title": "12/5, Sevan street, Kentron, Yerevan, 0023, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.165776,
+    "lon": 44.50804,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 44.65,
+      "pm10": 75.3,
+      "aqi": 124
+    }
+  },
+  {
+    "id": 345,
+    "title": "8/1, улица Никогаоса Адонца, Арабкир, Ереван, 0014, Армения",
+    "type": "armaqi",
+    "lat": 40.214111,
+    "lon": 44.521227,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:15:15.723Z",
+      "temperature": 2.02,
+      "pressure": 88953.81,
+      "humidity": 53.41,
+      "pm2": 27.44617830719717,
+      "pm10": 32.78,
+      "aqi": 85
+    }
+  },
+  {
+    "id": 346,
+    "title": "Тупик",
+    "type": "armaqi",
+    "lat": 40.206,
+    "lon": 44.531,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:15.16Z",
+      "temperature": 0.7,
+      "pressure": 88949.22,
+      "humidity": 58.56,
+      "pm2": 28.21442709197942,
+      "pm10": 31.55,
+      "aqi": 87
+    }
+  },
+  {
+    "id": 347,
+    "title": "3, Hovsep Arghutian street, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.212785,
+    "lon": 44.506695,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 16.24,
+      "pm10": 28.42,
+      "aqi": 64
+    }
+  },
+  {
+    "id": 348,
+    "title": "3, Malkhasyants lane, Arabkir, Yerevan, 0051, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.211744,
+    "lon": 44.505802,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.43,
+      "pm10": 74.82,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 349,
+    "title": "150, Antarayin street, Kentron, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.19362,
+    "lon": 44.510298,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 32.5,
+      "pm10": 61.38,
+      "aqi": 95
+    }
+  },
+  {
+    "id": 350,
+    "title": "Pirumyanner, Davidashen 1st block, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.222031,
+    "lon": 44.493627,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.19,
+      "pm10": 84.87,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 351,
+    "title": "Pirumyanner, Davidashen 1st block, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.222163,
+    "lon": 44.493371,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 24.04,
+      "pm10": 46.46,
+      "aqi": 79
+    }
+  },
+  {
+    "id": 352,
+    "title": "Grand Candy LLC, 33, Hrant Vardanyan street, Shengavit, Yerevan, 0061, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.144983,
+    "lon": 44.505133,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.36,
+      "pm10": 80.14,
+      "aqi": 118
+    }
+  },
+  {
+    "id": 354,
+    "title": "49, Movses Khorenatsi street, Kentron, Yerevan, 0018, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.163031,
+    "lon": 44.517341,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 47.19,
+      "pm10": 94.47,
+      "aqi": 130
+    }
+  },
+  {
+    "id": 355,
+    "title": "21/12, Leningradyan street, Ajapnyak, Yerevan, 0099, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.188241,
+    "lon": 44.468487,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.93,
+      "pm10": 74.02,
+      "aqi": 114
+    }
+  },
+  {
+    "id": 356,
+    "title": "23/2, Leningradyan street, Ajapnyak, Yerevan, 0099, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.190132,
+    "lon": 44.472185,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.22,
+      "pm10": 64.65,
+      "aqi": 103
+    }
+  },
+  {
+    "id": 357,
+    "title": "23/2, Leningradyan street, Ajapnyak, Yerevan, 0099, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189939,
+    "lon": 44.472768,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.64,
+      "pm10": 62.9,
+      "aqi": 104
+    }
+  },
+  {
+    "id": 358,
+    "title": "Metsarents street, Malatia-Sebastia, Yerevan, 0099, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.188412,
+    "lon": 44.467341,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.6,
+      "pm10": 71.46,
+      "aqi": 111
+    }
+  },
+  {
+    "id": 359,
+    "title": "7/9, Lvovyan street, Nor Nork Block 1, Nor Norq, Yerevan, 0096, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.202378,
+    "lon": 44.559729,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 35.82,
+      "pm10": 78.5,
+      "aqi": 102
+    }
+  },
+  {
+    "id": 360,
+    "title": "7, Lvovyan street, Nor Nork Block 1, Nor Norq, Yerevan, 0056, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.202219,
+    "lon": 44.560074,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.94,
+      "pm10": 77.62,
+      "aqi": 107
+    }
+  },
+  {
+    "id": 361,
+    "title": "Anastas Mikoyan street, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.225273,
+    "lon": 44.505939,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.1,
+      "pm10": 68.37,
+      "aqi": 102
+    }
+  },
+  {
+    "id": 362,
+    "title": "115, Yeghvard highway, Davtashen, Yerevan, Nairi community, Kotayk Province, 0024, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.224942,
+    "lon": 44.506345,
+    "place_id": 6,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.38,
+      "pm10": 71.92,
+      "aqi": 108
+    }
+  },
+  {
+    "id": 363,
+    "title": "12, Byron street, Kentron, Yerevan, 0009, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.186945,
+    "lon": 44.51819,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.26,
+      "pm10": 64.17,
+      "aqi": 105
+    }
+  },
+  {
+    "id": 364,
+    "title": "4/2, Hrant Vardanyan street, Shengavit, Yerevan, 0061, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.14602,
+    "lon": 44.500262,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 45.87,
+      "pm10": 0,
+      "aqi": 127
+    }
+  },
+  {
+    "id": 365,
+    "title": "Avan, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.22015,
+    "lon": 44.550599,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.23,
+      "pm10": 81.42,
+      "aqi": 113
+    }
+  },
+  {
+    "id": 366,
+    "title": "37/15, Hrachya Acharyan street, Avan, Yerevan, 0040, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.220479,
+    "lon": 44.550696,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.97,
+      "pm10": 75.9,
+      "aqi": 107
+    }
+  },
+  {
+    "id": 367,
+    "title": "146/1, Verin Antarayin street, Kentron, Yerevan, 0009, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.195212,
+    "lon": 44.513069,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 43.55,
+      "pm10": 79.58,
+      "aqi": 121
+    }
+  },
+  {
+    "id": 368,
+    "title": "146/1, Verin Antarayin street, Kentron, Yerevan, 0009, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.195025,
+    "lon": 44.513187,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.47,
+      "pm10": 74.78,
+      "aqi": 116
+    }
+  },
+  {
+    "id": 369,
+    "title": "47, Movses Khorenatsi street, Kentron, Yerevan, 0018, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.162966,
+    "lon": 44.516727,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 67.73,
+      "pm10": 133.94,
+      "aqi": 160
+    }
+  },
+  {
+    "id": 370,
+    "title": "61, Davidashen 1st block, Դավթաշեն, Davtashen, Yerevan, 0058, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.219126,
+    "lon": 44.485678,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.84,
+      "pm10": 69.86,
+      "aqi": 107
+    }
+  },
+  {
+    "id": 371,
+    "title": "64, Davidashen 1st block, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.222112,
+    "lon": 44.491769,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.83,
+      "pm10": 73.6,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 372,
+    "title": "Dolphin, 36/3, Pirumyanner street, Davidashen 1st block, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.222093,
+    "lon": 44.491541,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.91,
+      "pm10": 0,
+      "aqi": 109
+    }
+  },
+  {
+    "id": 373,
+    "title": "Айгедзор",
+    "type": "armaqi",
+    "lat": 40.7696272,
+    "lon": 44.6736646,
+    "place_id": 14,
+    "data": {
+      "timestamp": "2025-12-18T02:14:32.94Z",
+      "temperature": 2.8,
+      "pressure": 91050.56,
+      "humidity": 50.47,
+      "pm2": 32.4723937862624,
+      "pm10": 38.2,
+      "aqi": 95
+    }
+  },
+  {
+    "id": 377,
+    "title": "Гюмри, Ширакская область, ущелье Черкези",
+    "type": "armaqi",
+    "lat": 40.795998,
+    "lon": 43.829624,
+    "place_id": 2,
+    "data": {
+      "timestamp": "2025-12-18T02:15:02.649Z",
+      "temperature": 18.93,
+      "pressure": 85400.34,
+      "humidity": 50.73,
+      "pm2": 14.494845360824744,
+      "pm10": 12.73,
+      "aqi": 61
+    }
+  },
+  {
+    "id": 379,
+    "title": "29, улица Ростома, Кентрон, Ереван, 0070, Армения",
+    "type": "armaqi",
+    "lat": 40.168,
+    "lon": 44.519,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:13:39.033Z",
+      "temperature": 3.56,
+      "pressure": 91371.88,
+      "humidity": 51.2,
+      "pm2": 30.221688877660583,
+      "pm10": 31.17,
+      "aqi": 90
+    }
+  },
+  {
+    "id": 380,
+    "title": "19/7, Nikoghayos Adonts Street, Arabkir, Yerevan, 0021, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.213612,
+    "lon": 44.518605,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.57,
+      "pm10": 0,
+      "aqi": 109
+    }
+  },
+  {
+    "id": 381,
+    "title": "49, Quchak block, Avan, Yerevan, 0060, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.218868,
+    "lon": 44.575843,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 33.51,
+      "pm10": 0,
+      "aqi": 96
+    }
+  },
+  {
+    "id": 382,
+    "title": "Vagharsh Vagharshyan Street, Arabkir, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.195939,
+    "lon": 44.50375,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 38.13,
+      "pm10": 0,
+      "aqi": 107
+    }
+  },
+  {
+    "id": 383,
+    "title": "8, Sose street 2nd lane, Arabkir, Yerevan, 0019, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.1961,
+    "lon": 44.504042,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.92,
+      "pm10": 0,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 384,
+    "title": "13, Ghapantsian street, Qanaqer HPS Disrict, Arabkir, Yerevan, 0021, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.216232,
+    "lon": 44.520748,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40.3,
+      "pm10": 0,
+      "aqi": 113
+    }
+  },
+  {
+    "id": 385,
+    "title": "Ghapantsian street, Qanaqer HPS Disrict, Arabkir, Yerevan, 0021, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.21649,
+    "lon": 44.520472,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.58,
+      "pm10": 0,
+      "aqi": 104
+    }
+  },
+  {
+    "id": 386,
+    "title": "4, 3-й тупик Карапета Улнеци, Канакер-Зейтун, Ереван, 0014, Армения",
+    "type": "armaqi",
+    "lat": 40.209,
+    "lon": 44.54,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:14:23.338Z",
+      "temperature": 1.72,
+      "pressure": 88417.03,
+      "humidity": 53.39,
+      "pm2": 26.90799202726162,
+      "pm10": 30.75,
+      "aqi": 84
+    }
+  },
+  {
+    "id": 387,
+    "title": "27/7, Kirk Kerkorian street, Ajapnyak, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189209,
+    "lon": 44.472381,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.69,
+      "pm10": 0,
+      "aqi": 106
+    }
+  },
+  {
+    "id": 388,
+    "title": "27/7, Kirk Kerkorian street, Ajapnyak, Yerevan, 0038, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.189142,
+    "lon": 44.472369,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.22,
+      "pm10": 0,
+      "aqi": 110
+    }
+  },
+  {
+    "id": 389,
+    "title": "Kuuuzya",
+    "type": "armaqi",
+    "lat": 40.195028,
+    "lon": 44.474764,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T02:15:18.445Z",
+      "temperature": 1.64,
+      "pressure": 90700.38,
+      "humidity": 52.12,
+      "pm2": 29.404301211698282,
+      "pm10": 31.65,
+      "aqi": 89
+    }
+  },
+  {
+    "id": 390,
+    "title": "Dzor 2 district, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.218985,
+    "lon": 44.502479,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 36.64,
+      "pm10": 0,
+      "aqi": 104
+    }
+  },
+  {
+    "id": 391,
+    "title": "Dzor 2 district, Davtashen, Yerevan, 0054, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.218931,
+    "lon": 44.502157,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 31.89,
+      "pm10": 0,
+      "aqi": 93
+    }
+  },
+  {
+    "id": 393,
+    "title": "Nor Norq, Yerevan, 0092, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.170744,
+    "lon": 44.548314,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 30.44,
+      "pm10": 0,
+      "aqi": 91
+    }
+  },
+  {
+    "id": 395,
+    "title": "145, Zakaria Sarkavag Street, Qanaqer-Zeytun, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.229868,
+    "lon": 44.551174,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.64,
+      "pm10": 0,
+      "aqi": 106
+    }
+  },
+  {
+    "id": 396,
+    "title": "145, Zakaria Sarkavag Street, Qanaqer-Zeytun, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.229906,
+    "lon": 44.55126,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 40,
+      "pm10": 0,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 397,
+    "title": "4, Grigor Lusavorich street, Kentron, Yerevan, 0015, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.172805,
+    "lon": 44.508441,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 39.78,
+      "pm10": 0,
+      "aqi": 112
+    }
+  },
+  {
+    "id": 398,
+    "title": "Aghsaqal, دهستان صومای جنوبی, بخش صومای برادوست, Urumia County, West Azerbaijan Province, Iran",
+    "type": "gis.yerevan.am",
+    "lat": 37.87902695,
+    "lon": 44.507556,
+    "place_id": 15,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 42.17,
+      "pm10": 0,
+      "aqi": 117
+    }
+  },
+  {
+    "id": 399,
+    "title": "Avan, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.225535,
+    "lon": 44.550449,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 37.77,
+      "pm10": 0,
+      "aqi": 107
+    }
+  },
+  {
+    "id": 400,
+    "title": "Qanaqer-Zeytun, Yerevan, 0091, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.225238,
+    "lon": 44.549782,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 35.42,
+      "pm10": 0,
+      "aqi": 105
+    }
+  },
+  {
+    "id": 401,
+    "title": "180, Norqi Ayginer street, Norq Marash, Yerevan, 0047, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.183089,
+    "lon": 44.536401,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 35.8,
+      "pm10": 67.45,
+      "aqi": 102
+    }
+  },
+  {
+    "id": 402,
+    "title": "Tsitsernakaberd Highway, Kentron, Yerevan, 0082, Armenia",
+    "type": "gis.yerevan.am",
+    "lat": 40.181138,
+    "lon": 44.482055,
+    "place_id": 1,
+    "data": {
+      "timestamp": "2025-12-18T01:00:00Z",
+      "temperature": null,
+      "pressure": null,
+      "humidity": null,
+      "pm2": 41.36,
+      "pm10": 74.92,
+      "aqi": 115
+    }
+  }
+]

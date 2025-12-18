@@ -29,6 +29,23 @@ config :logger, level: :warning
 # Initialize plugs at runtime for faster test compilation
 config :phoenix, :plug_init_mode, :runtime
 
+# Set Req to use the test adapter
+config :req, :adapter, Req.Test
+
 # Enable helpful, but potentially expensive runtime checks
 config :phoenix_live_view,
   enable_expensive_runtime_checks: true
+
+config :weather_server, :openaq_req_options,
+  plug: {Req.Test, WeatherServer.Apis.OpenAQ},
+  retry: false
+
+config :weather_server, :weatherapi_req_options,
+  plug: {Req.Test, WeatherServer.Apis.WeatherApi},
+  retry: false
+
+config :weather_server, :armaqi_req_options,
+  plug: {Req.Test, WeatherServer.Apis.Armaqi},
+  retry: false
+
+System.put_env("OPENAQ_API_KEY", "test-key")

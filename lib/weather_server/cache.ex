@@ -1,17 +1,27 @@
 defmodule WeatherServer.Cache do
   use GenServer
+  # alias WeatherServer.Apis.OpenAQ
+  alias WeatherServer.Apis.Armaqi
   alias WeatherServer.Apis.WeatherApi
 
   @topic "dashboard_updates"
 
+  @type payload :: %{
+          weather: WeatherApi.WeatherData.t(),
+          aqi: Armaqi.aggregate()
+        }
+
+  @spec start_link(any()) :: GenServer.on_start()
   def start_link(_) do
     GenServer.start_link(__MODULE__, %{}, name: __MODULE__)
   end
 
+  @spec get_current_data() :: {:ok, payload()} | {:error, term()}
   def get_current_data do
     GenServer.call(__MODULE__, :get_data)
   end
 
+  @spec subscribe() :: :ok | {:error, term()}
   def subscribe do
     Phoenix.PubSub.subscribe(WeatherServer.PubSub, @topic)
   end
@@ -53,8 +63,14 @@ defmodule WeatherServer.Cache do
 
   defp schedule_next_fetch, do: Process.send_after(self(), :tick, 15 * 60 * 1000)
 
+  @spec fetch_external_api() :: {:ok, payload()} | {:error, term()}
   defp fetch_external_api do
-    WeatherApi.fetch("Yerevan")
+    with {:ok, weather_data} <- WeatherApi.fetch("Yerevan"),
+         {:ok, aqi_data} <- Armaqi.fetch() do
+      {:ok, %{weather: weather_data, aqi: aqi_data}}
+    else
+      {:error, reason} -> {:error, reason}
+    end
   end
 
   defp valid_data?(nil), do: false
