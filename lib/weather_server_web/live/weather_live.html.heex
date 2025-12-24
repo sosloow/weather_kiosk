@@ -1,7 +1,7 @@
 <section class="
     card bg-base-200/90 border border-base-300/70
     shadow-xl rounded-2xl backdrop-blur
-    relative overflow-hidden h-full
+    relative overflow-hidden h-[290px]
     flex items-center justify-center
     glossy-top-border
   ">
@@ -54,9 +54,14 @@
 
 <div class="
       grid grid-cols-2 gap-3
-      h-full content-stretch
+      h-[290px] content-stretch
     ">
-  <.aqi_section aqi={@aqi.aqi} raw_aqi={@aqi.raw_aqi} pm2_5={@aqi.pm2_5} />
+  <.aqi_section_hourly
+    aqi={@aqi.aqi}
+    raw_aqi={@aqi.raw_aqi}
+    pm2_5={@aqi.pm2_5}
+    history={@aqi.history || []}
+  />
   <section class="
     card bg-base-200/90 border border-base-300/70
     shadow-xl rounded-2xl backdrop-blur

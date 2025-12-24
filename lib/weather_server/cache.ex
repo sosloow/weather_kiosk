@@ -10,6 +10,7 @@ defmodule WeatherServer.Cache do
           weather: WeatherApi.WeatherData.t(),
           aqi: Armaqi.aggregate()
         }
+  @type state :: nil | payload()
 
   @spec start_link(any()) :: GenServer.on_start()
   def start_link(_) do
@@ -33,6 +34,7 @@ defmodule WeatherServer.Cache do
   end
 
   @impl true
+  @spec handle_info(:tick, state()) :: {:noreply, state()}
   def handle_info(:tick, state) do
     schedule_next_fetch()
 
@@ -47,6 +49,8 @@ defmodule WeatherServer.Cache do
   end
 
   @impl true
+  @spec handle_call(:get_data, GenServer.from(), state()) ::
+          {:reply, {:ok, payload()} | {:error, term()}, state()}
   def handle_call(:get_data, _from, current_state) do
     if valid_data?(current_state) do
       {:reply, {:ok, current_state}, current_state}

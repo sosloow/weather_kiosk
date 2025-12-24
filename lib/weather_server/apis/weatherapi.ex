@@ -38,7 +38,7 @@ defmodule WeatherServer.Apis.WeatherApi do
   @spec fetch(String.t()) :: {:ok, WeatherData.t()} | {:error, String.t()}
   def fetch(city) do
     api_key = get_api_key()
-    params = [key: api_key, q: city, days: 3, aqi: "yes", alerts: "no"]
+    params = [key: api_key, q: city, days: 3, aqi: "no", alerts: "no"]
 
     client =
       [base_url: "https://api.weatherapi.com/v1"]

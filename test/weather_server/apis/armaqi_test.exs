@@ -20,14 +20,16 @@ defmodule WeatherServer.Apis.ArmaqiTest do
   end
 
   describe "fetch/0" do
+    @tag capture_log: true
     test "returns latest entry as aggregate" do
       assert {:ok, result} = Armaqi.fetch()
 
-      assert result.aqi == 102
+      assert result.aqi == 3
       assert result.pm2_5 == 35.9
       assert result.raw_aqi == 102
       assert result.label == "Yerevan"
       assert result.source == "Armaqi"
+      assert length(result.history) == 24
     end
 
     @tag capture_log: true

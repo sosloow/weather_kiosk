@@ -57,6 +57,10 @@ config :logger, :default_formatter,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :weather_server,
+  timezone: "Asia/Yerevan",
+  timezone_fallback_offset_seconds: 4 * 60 * 60
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
