@@ -238,23 +238,155 @@ defmodule WeatherServerWeb.DashboardComponents do
     """
   end
 
+  @spec format_local_time(DateTime.t()) :: String.t()
   defp format_local_time(%DateTime{} = dt) do
-    tz = Application.get_env(:weather_server, :timezone, "Etc/UTC")
-
-    case DateTime.shift_zone(dt, tz) do
-      {:ok, local} ->
-        Calendar.strftime(local, "%H:%M")
-
-      {:error, _} ->
-        dt
-        |> DateTime.add(timezone_fallback_offset_seconds(), :second)
-        |> Calendar.strftime("%H:%M")
-    end
+    dt
+    |> localize_datetime()
+    |> Calendar.strftime("%H:%M")
   rescue
     _ -> "--:--"
   end
 
+  @spec localize_datetime(DateTime.t()) :: DateTime.t()
+  defp localize_datetime(%DateTime{} = dt) do
+    tz = Application.get_env(:weather_server, :timezone, "Etc/UTC")
+
+    case DateTime.shift_zone(dt, tz) do
+      {:ok, local} -> local
+      {:error, _} -> DateTime.add(dt, timezone_fallback_offset_seconds(), :second)
+    end
+  end
+
   defp timezone_fallback_offset_seconds do
     Application.get_env(:weather_server, :timezone_fallback_offset_seconds, 0)
+  end
+
+  @spec seconds_after_midnight(DateTime.t()) :: non_neg_integer()
+  defp seconds_after_midnight(%DateTime{} = dt) do
+    %Time{hour: hour, minute: minute, second: second} = DateTime.to_time(dt)
+    hour * 3600 + minute * 60 + second
+  end
+
+  @spec day_night_positions(any(), any()) :: %{
+          sunrise: DateTime.t(),
+          sunset: DateTime.t(),
+          sunrise_pct: float(),
+          sunset_pct: float(),
+          now_pct: float(),
+          is_day: boolean()
+        }
+  defp day_night_positions(%DateTime{} = sunrise, %DateTime{} = sunset) do
+    %DateTime{} = local_sunrise = localize_datetime(sunrise)
+    %DateTime{} = local_sunset = localize_datetime(sunset)
+    # %DateTime{} = local_now = localize_datetime(DateTime.utc_now())
+    %DateTime{} = local_now = DateTime.from_unix!(1_767_202_200)
+
+    day_seconds = 86_399.0
+    sunrise_sec = seconds_after_midnight(local_sunrise)
+    sunset_sec = seconds_after_midnight(local_sunset)
+    now_sec = seconds_after_midnight(local_now)
+
+    raw_sunrise_pct = sunrise_sec / day_seconds * 100
+    raw_sunset_pct = sunset_sec / day_seconds * 100
+    raw_now_pct = now_sec / day_seconds * 100
+
+    scale_min = 8.0
+    scale_span = 84.0
+    sunrise_pct = (scale_min + raw_sunrise_pct * scale_span / 100) |> Float.round(1)
+    sunset_pct = (scale_min + raw_sunset_pct * scale_span / 100) |> Float.round(1)
+    now_pct = (scale_min + raw_now_pct * scale_span / 100) |> Float.round(1)
+
+    %{
+      sunrise: local_sunrise,
+      sunset: local_sunset,
+      sunrise_pct: sunrise_pct,
+      sunset_pct: sunset_pct,
+      now_pct: now_pct,
+      is_day: now_sec >= sunrise_sec and now_sec <= sunset_sec
+    }
+  end
+
+  defp day_night_positions(_, _) do
+    now = DateTime.utc_now()
+    day_night_positions(now, now)
+  end
+
+  attr :sunrise, :any, required: true
+  attr :sunset, :any, required: true
+
+  def day_night_cycle(assigns) do
+    ~H"""
+    <section class="
+    card bg-base-200/90 border border-base-300/70
+    shadow-xl rounded-2xl backdrop-blur
+    min-h-0 relative h-full
+    glossy-top-border
+    overflow-hidden flex flex-col">
+      <div class="px-4 pt-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.6px] text-base-content/60">
+        Day / Night
+      </div>
+
+      <div class="flex-1 min-h-0 px-4 pb-4 flex items-stretch">
+        <% positions = day_night_positions(@sunrise, @sunset)
+        local_sunrise = positions.sunrise
+        local_sunset = positions.sunset
+        sunrise_pct = positions.sunrise_pct
+        sunset_pct = positions.sunset_pct
+        now_pct = positions.now_pct
+        is_day = positions.is_day %>
+        <div class="relative h-full w-2 self-center flex-1 rounded-2xl overflow-hidden">
+          <div
+            class="absolute inset-0 opacity-15"
+            style={
+              "background: linear-gradient(to bottom, " <>
+                "rgba(96,165,250,0.45) 0%, " <>
+                "rgba(96,165,250,0.45) #{sunrise_pct}%, " <>
+                "rgba(245,158,11,0.5) #{sunrise_pct}%, " <>
+                "rgba(245,158,11,0.5) #{sunset_pct}%, " <>
+                "rgba(96,165,250,0.45) #{sunset_pct}%, " <>
+                "rgba(96,165,250,0.45) 100%);"
+            }
+          >
+          </div>
+          <div class="absolute inset-y-4 left-1/2 -translate-x-1/2 w-[3px] rounded-full bg-base-content/15">
+          </div>
+
+          <div
+            class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2"
+            style={"top: #{now_pct}%"}
+            id="day-night-now"
+          >
+            <.icon
+              name={if(is_day, do: "hero-sun", else: "hero-moon")}
+              class={[
+                "w-12 h-12",
+                if(is_day,
+                  do: "text-amber-300",
+                  else: "text-amber-300"
+                )
+              ]}
+            />
+          </div>
+        </div>
+
+        <div class="flex-1 h-full relative">
+          <div
+            class="absolute right-0 -translate-y-1/2 text-2xl font-semibold text-base-content/70"
+            style={"top: #{sunrise_pct}%"}
+            id="sunrise-label"
+          >
+            {Calendar.strftime(local_sunrise, "%H:%M")}
+          </div>
+          <div
+            class="absolute right-0 -translate-y-1/2 text-2xl font-semibold text-base-content/70"
+            style={"top: #{sunset_pct}%"}
+            id="sunset-label"
+          >
+            {Calendar.strftime(local_sunset, "%H:%M")}
+          </div>
+        </div>
+      </div>
+    </section>
+    """
   end
 end
