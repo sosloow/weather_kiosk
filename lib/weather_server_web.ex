@@ -87,7 +87,7 @@ defmodule WeatherServerWeb do
       import Phoenix.HTML
       # Core UI components
       import WeatherServerWeb.CoreComponents
-      import WeatherServerWeb.DashboardComponents
+      import WeatherServerWeb.WeatherComponents
 
       # Common modules used in templates
       alias Phoenix.LiveView.JS

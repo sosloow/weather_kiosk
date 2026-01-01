@@ -529,4 +529,21 @@ defmodule WeatherServerWeb.CoreComponents do
   def translate_errors(errors, field) when is_list(errors) do
     for {^field, {msg, opts}} <- errors, do: translate_error({msg, opts})
   end
+
+  slot :inner_block, required: true
+  attr :class, :string, default: ""
+
+  def panel(assigns) do
+    ~H"""
+    <section class={["
+    card bg-base-200/90 border border-base-300/70
+    shadow-xl rounded-2xl backdrop-blur
+    min-h-0 h-full relative
+    z-20 overflow-hidden
+    glossy-top-border
+    ", @class]}>
+      {render_slot(@inner_block)}
+    </section>
+    """
+  end
 end

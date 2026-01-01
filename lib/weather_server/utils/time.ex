@@ -30,4 +30,16 @@ defmodule WeatherServer.Utils.Time do
 
     Time.new!(hour, minute, 0)
   end
+
+  @spec format_local_time(Time.t()) :: String.t()
+  def format_local_time(%Time{} = time) do
+    Calendar.strftime(time, "%H:%M")
+  rescue
+    _ -> "--:--"
+  end
+
+  @spec time_from_datetime(DateTime.t()) :: Time.t()
+  def time_from_datetime(%DateTime{} = dt) do
+    DateTime.to_time(dt)
+  end
 end

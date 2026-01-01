@@ -1,6 +1,6 @@
 <div class="
     w-[1024px] h-[600px] fixed top-0 left-0
-    grid grid-cols-[1fr_1fr_80px] grid-rows-[auto_1fr_auto]
+    grid grid-cols-[1fr_80px] grid-rows-[auto_1fr]
     p-3 gap-3
     bg-base-300
     overflow-hidden
@@ -56,20 +56,14 @@
     </div>
   </header>
 
-  <main
-    id="page-content"
-    class="
-      col-span-2 row-start-2
-      grid grid-cols-2 grid-rows-[3fr_2fr] gap-3
-      min-h-0 overflow-visible
-    "
-  >
+  <main id="page-content" class="col-span-2 row-start-2">
     {@inner_content}
   </main>
 
   <nav class="
       col-start-3 row-span-2
       flex flex-col gap-2.5
+      h-full
       p-3
       bg-base-200/90 border border-base-300/70
       rounded-2xl shadow-lg backdrop-blur
@@ -132,6 +126,5 @@
       />
     </a>
   </nav>
-
-  <.flash_group flash={@flash} />
 </div>
+<.flash_group flash={@flash} />

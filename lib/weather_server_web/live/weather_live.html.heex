@@ -1,76 +1,70 @@
-<section class="
-    card bg-base-200/90 border border-base-300/70
-    shadow-xl rounded-2xl backdrop-blur
-    relative overflow-hidden h-[290px]
-    flex items-center justify-center
-    glossy-top-border
-  ">
-  <div class="w-full px-8 grid grid-cols-3 gap-8 items-center">
-    <div class="flex flex-col items-start justify-center">
-      <div
-        id="temperature"
-        class="
+<div
+  id="page-content"
+  class="h-full grid grid-cols-[2fr_1fr_1fr] grid-rows-[290px_1fr] gap-3"
+>
+  <.panel class="flex items-center justify-center">
+    <div class="w-full px-8 grid grid-cols-3 gap-8 items-center">
+      <div class="flex flex-col items-start justify-center">
+        <div
+          id="temperature"
+          class="
           text-[80px] leading-none font-light
           text-base-content drop-shadow-lg
         "
-      >
-        {@weather.current.temp_c}°
-      </div>
-      <div
-        id="feels-like"
-        class="
+        >
+          {@weather.current.temp_c}°
+        </div>
+        <div
+          id="feels-like"
+          class="
           text-base font-medium text-base-content/70 pl-1
         "
-      >
-        Feels like {@weather.current.feelslike_c}°
+        >
+          Feels like {@weather.current.feelslike_c}°
+        </div>
       </div>
-    </div>
 
-    <div class="col-span-2 flex flex-col items-center justify-center text-base-content/90">
-      <img
-        id="current-icon"
-        src={@weather.current.icon}
-        alt="Weather"
-        class="
+      <div class="col-span-2 flex flex-col items-center justify-center text-base-content/90">
+        <img
+          id="current-icon"
+          src={@weather.current.icon}
+          alt="Weather"
+          class="
           w-[120px] h-[120px] object-contain drop-shadow-md mb-2
         "
-      />
-      <div id="condition" class="text-lg font-semibold">
-        {@weather.current.condition_text}
-      </div>
-      <div class="flex items-center gap-6 mt-2 text-sm font-medium">
-        <div class="flex items-center gap-2">
-          <img src="/images/weather/wet.png" class="w-5 h-5 opacity-70" />
-          <span>{@weather.current.humidity}%</span>
+        />
+        <div id="condition" class="text-lg font-semibold">
+          {@weather.current.condition_text}
         </div>
-        <div class="flex items-center gap-2">
-          <img src="/images/weather/wind.png" class="w-5 h-5 opacity-70" />
-          <span>{@weather.current.wind_kph} km/h</span>
+        <div class="flex items-center gap-6 mt-2 text-sm font-medium">
+          <div class="flex items-center gap-2">
+            <img src="/images/weather/wet.png" class="w-5 h-5 opacity-70" />
+            <span>{@weather.current.humidity}%</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="/images/weather/wind.png" class="w-5 h-5 opacity-70" />
+            <span>{@weather.current.wind_kph} km/h</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </.panel>
 
-<div class="
-      grid grid-cols-2 gap-3
-      h-[290px] content-stretch
-    ">
-  <.aqi_section_hourly
-    aqi={@aqi.aqi}
-    raw_aqi={@aqi.raw_aqi}
-    pm2_5={@aqi.pm2_5}
-    history={@aqi.history || []}
-  />
-  <.day_night_cycle
-    sunrise={@weather.astro.sunrise_at}
-    sunset={@weather.astro.sunset_at}
-  />
+  <.panel>
+    <.aqi_section_hourly
+      aqi={@aqi.aqi}
+      raw_aqi={@aqi.raw_aqi}
+      pm2_5={@aqi.pm2_5}
+      history={@aqi.history || []}
+    />
+  </.panel>
+  <.panel><div></div></.panel>
+
+  <.panel class="col-span-3 w-full h-full">
+    <.hour_forecast
+      hours={@hourly_forecast_condensed}
+      sunrise={@weather.astro.sunrise_at}
+      sunset={@weather.astro.sunset_at}
+    />
+  </.panel>
 </div>
-
-<.hour_forecast
-  hours={@hourly_forecast_condensed}
-  sunrise={@weather.astro.sunrise_at}
-  sunset={@weather.astro.sunset_at}
-  class="col-span-2 w-full"
-/>
