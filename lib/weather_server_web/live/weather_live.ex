@@ -6,8 +6,6 @@ defmodule WeatherServerWeb.WeatherLive do
   def mount(_params, _session, socket) do
     if connected?(socket), do: Cache.subscribe()
 
-    _ = WeatherServer.Apis.Waqi.fetch("Yerevan")
-
     with {:ok, %{weather: weather_data, aqi: aqi_data}} <- Cache.get_current_data() do
       socket =
         socket
@@ -16,6 +14,10 @@ defmodule WeatherServerWeb.WeatherLive do
         |> assign(
           :header_title,
           "#{weather_data.location["name"]}, #{weather_data.location["country"]}"
+        )
+        |> assign(
+          :hourly_forecast_condensed,
+          Map.get(weather_data, :hourly_forecast_condensed, weather_data.hourly_forecast)
         )
         |> assign(:page_title, "Weather Dashboard")
 

@@ -2,6 +2,10 @@ defmodule WeatherServerWeb.DashboardComponents do
   use Phoenix.Component
   import WeatherServerWeb.CoreComponents
   import WeatherServer.Utils.Weather
+  alias WeatherServer.Utils
+
+  @precip_max_mm 15.0
+  @precip_scaling_factor 4.0
 
   attr :title, :string, required: true
 
@@ -153,7 +157,7 @@ defmodule WeatherServerWeb.DashboardComponents do
     <section class="
     card bg-base-200/90 border border-base-300/70
     shadow-xl rounded-2xl backdrop-blur
-    min-h-0 relative h-full
+    min-h-0 relative h-full z-20
     glossy-top-border
     overflow-visible flex flex-col">
       <div class={
@@ -196,7 +200,7 @@ defmodule WeatherServerWeb.DashboardComponents do
                 |> Enum.reverse()
                 |> Enum.take(24)
                 |> Enum.map(fn h ->
-                  %{value: h.raw_aqi, time: format_local_time(h.period_start)}
+                  %{value: h.raw_aqi, time: time_from_datetime(h.period_start)}
                 end)
 
               max_value = Enum.max(Enum.map(hourly_entries, & &1.value) ++ [1]) %>
@@ -212,12 +216,12 @@ defmodule WeatherServerWeb.DashboardComponents do
                   |> Float.round(1)
                   |> max(3.0)
 
-                tooltip = "#{entry.time} · AQI #{entry.value}" %>
-                <div
-                  class="flex items-end flex-none w-[6px] tooltip tooltip-top"
+                tooltip = "#{format_local_time(entry.time)} · AQI #{entry.value}" %>
+                <.tooltip
+                  text={tooltip}
+                  position="tooltip-top"
+                  class="relative z-50 flex items-end flex-none w-[6px]"
                   id={"aqi-hour-bar-#{idx}"}
-                  data-tip={tooltip}
-                  tabindex="0"
                   role="button"
                 >
                   <div
@@ -228,7 +232,7 @@ defmodule WeatherServerWeb.DashboardComponents do
                     style={"height: #{height_px}px; opacity: 0.9"}
                   >
                   </div>
-                </div>
+                </.tooltip>
               <% end %>
             </div>
           </div>
@@ -238,52 +242,37 @@ defmodule WeatherServerWeb.DashboardComponents do
     """
   end
 
-  @spec format_local_time(DateTime.t()) :: String.t()
-  defp format_local_time(%DateTime{} = dt) do
-    dt
-    |> localize_datetime()
-    |> Calendar.strftime("%H:%M")
+  @spec format_local_time(Time.t()) :: String.t()
+  defp format_local_time(%Time{} = time) do
+    Calendar.strftime(time, "%H:%M")
   rescue
     _ -> "--:--"
   end
 
-  @spec localize_datetime(DateTime.t()) :: DateTime.t()
-  defp localize_datetime(%DateTime{} = dt) do
-    tz = Application.get_env(:weather_server, :timezone, "Etc/UTC")
-
-    case DateTime.shift_zone(dt, tz) do
-      {:ok, local} -> local
-      {:error, _} -> DateTime.add(dt, timezone_fallback_offset_seconds(), :second)
-    end
+  @spec time_from_datetime(DateTime.t()) :: Time.t()
+  defp time_from_datetime(%DateTime{} = dt) do
+    DateTime.to_time(dt)
   end
 
-  defp timezone_fallback_offset_seconds do
-    Application.get_env(:weather_server, :timezone_fallback_offset_seconds, 0)
-  end
-
-  @spec seconds_after_midnight(DateTime.t()) :: non_neg_integer()
-  defp seconds_after_midnight(%DateTime{} = dt) do
-    %Time{hour: hour, minute: minute, second: second} = DateTime.to_time(dt)
+  @spec seconds_after_midnight(Time.t()) :: non_neg_integer()
+  defp seconds_after_midnight(%Time{hour: hour, minute: minute, second: second}) do
     hour * 3600 + minute * 60 + second
   end
 
-  @spec day_night_positions(any(), any()) :: %{
-          sunrise: DateTime.t(),
-          sunset: DateTime.t(),
+  @spec day_night_positions(Time.t() | nil, Time.t() | nil) :: %{
+          sunrise: Time.t(),
+          sunset: Time.t(),
           sunrise_pct: float(),
           sunset_pct: float(),
           now_pct: float(),
           is_day: boolean()
         }
-  defp day_night_positions(%DateTime{} = sunrise, %DateTime{} = sunset) do
-    %DateTime{} = local_sunrise = localize_datetime(sunrise)
-    %DateTime{} = local_sunset = localize_datetime(sunset)
-    # %DateTime{} = local_now = localize_datetime(DateTime.utc_now())
-    %DateTime{} = local_now = DateTime.from_unix!(1_767_202_200)
+  defp day_night_positions(%Time{} = sunrise, %Time{} = sunset) do
+    %Time{} = local_now = Utils.Time.local_now_time()
 
     day_seconds = 86_399.0
-    sunrise_sec = seconds_after_midnight(local_sunrise)
-    sunset_sec = seconds_after_midnight(local_sunset)
+    sunrise_sec = seconds_after_midnight(sunrise)
+    sunset_sec = seconds_after_midnight(sunset)
     now_sec = seconds_after_midnight(local_now)
 
     raw_sunrise_pct = sunrise_sec / day_seconds * 100
@@ -297,8 +286,8 @@ defmodule WeatherServerWeb.DashboardComponents do
     now_pct = (scale_min + raw_now_pct * scale_span / 100) |> Float.round(1)
 
     %{
-      sunrise: local_sunrise,
-      sunset: local_sunset,
+      sunrise: sunrise,
+      sunset: sunset,
       sunrise_pct: sunrise_pct,
       sunset_pct: sunset_pct,
       now_pct: now_pct,
@@ -307,7 +296,7 @@ defmodule WeatherServerWeb.DashboardComponents do
   end
 
   defp day_night_positions(_, _) do
-    now = DateTime.utc_now()
+    now = Utils.Time.local_now_time()
     day_night_positions(now, now)
   end
 
@@ -319,36 +308,43 @@ defmodule WeatherServerWeb.DashboardComponents do
     <section class="
     card bg-base-200/90 border border-base-300/70
     shadow-xl rounded-2xl backdrop-blur
-    min-h-0 relative h-full
+    min-h-0 relative h-full z-10
     glossy-top-border
     overflow-hidden flex flex-col">
-      <div class="px-4 pt-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.6px] text-base-content/60">
+      <%!-- <div class="px-4 pt-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.6px] text-base-content/60"> --%>
+      <%!--   Day / Night --%>
+      <%!-- </div> --%>
+      <div class="absolute top-2 inset-x-0 text-[11px] font-semibold uppercase tracking-[0.6px] text-base-content/60 text-center">
         Day / Night
       </div>
 
-      <div class="flex-1 min-h-0 px-4 pb-4 flex items-stretch">
+      <div class="flex-1 min-h-0 px-4 pb-4 pt-10 flex items-stretch">
         <% positions = day_night_positions(@sunrise, @sunset)
         local_sunrise = positions.sunrise
         local_sunset = positions.sunset
         sunrise_pct = positions.sunrise_pct
         sunset_pct = positions.sunset_pct
         now_pct = positions.now_pct
-        is_day = positions.is_day %>
+        is_day = positions.is_day
+        day_span = max(sunset_pct - sunrise_pct, 0.0)
+        bottom_span = max(100.0 - sunset_pct, 0.0) %>
         <div class="relative h-full w-2 self-center flex-1 rounded-2xl overflow-hidden">
-          <div
-            class="absolute inset-0 opacity-15"
-            style={
-              "background: linear-gradient(to bottom, " <>
-                "rgba(96,165,250,0.45) 0%, " <>
-                "rgba(96,165,250,0.45) #{sunrise_pct}%, " <>
-                "rgba(245,158,11,0.5) #{sunrise_pct}%, " <>
-                "rgba(245,158,11,0.5) #{sunset_pct}%, " <>
-                "rgba(96,165,250,0.45) #{sunset_pct}%, " <>
-                "rgba(96,165,250,0.45) 100%);"
-            }
-          >
-          </div>
-          <div class="absolute inset-y-4 left-1/2 -translate-x-1/2 w-[3px] rounded-full bg-base-content/15">
+          <div class="absolute inset-0 opacity-20">
+            <div
+              class="absolute inset-x-0 top-0 bg-sky-800"
+              style={"height: #{sunrise_pct}%"}
+            >
+            </div>
+            <div
+              class="absolute inset-x-0 bg-amber-300"
+              style={"top: #{sunrise_pct}%; height: #{day_span}%"}
+            >
+            </div>
+            <div
+              class="absolute inset-x-0 bg-sky-800"
+              style={"top: #{sunset_pct}%; height: #{bottom_span}%"}
+            >
+            </div>
           </div>
 
           <div
@@ -356,29 +352,37 @@ defmodule WeatherServerWeb.DashboardComponents do
             style={"top: #{now_pct}%"}
             id="day-night-now"
           >
-            <.icon
-              name={if(is_day, do: "hero-sun", else: "hero-moon")}
-              class={[
-                "w-12 h-12",
-                if(is_day,
-                  do: "text-amber-300",
-                  else: "text-amber-300"
-                )
-              ]}
-            />
+            <div class="relative w-12 h-16 flex items-start justify-center">
+              <div class="w-12 h-12 rounded-full bg-base-200/80 ring-1 ring-base-300/60 shadow-md flex items-center justify-center">
+                <.icon
+                  name={if(is_day, do: "hero-sun", else: "hero-moon")}
+                  class={[
+                    "w-7 h-7",
+                    if(is_day,
+                      do: "text-amber-300",
+                      else: "text-slate-300"
+                    )
+                  ]}
+                />
+              </div>
+              <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-r-[10px] border-t-[12px] border-l-transparent border-r-transparent border-t-base-300/60">
+              </div>
+              <div class="absolute bottom-[1px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[9px] border-r-[9px] border-t-[11px] border-l-transparent border-r-transparent border-t-base-200/80 drop-shadow-[0_1px_2px_rgba(0,0,0,0.25)]">
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="flex-1 h-full relative">
           <div
-            class="absolute right-0 -translate-y-1/2 text-2xl font-semibold text-base-content/70"
+            class="absolute right-0 -translate-y-1/2 text-2xl font-semibold text-base-content/70 tabular-nums w-[4.5ch] text-right"
             style={"top: #{sunrise_pct}%"}
             id="sunrise-label"
           >
             {Calendar.strftime(local_sunrise, "%H:%M")}
           </div>
           <div
-            class="absolute right-0 -translate-y-1/2 text-2xl font-semibold text-base-content/70"
+            class="absolute right-0 -translate-y-1/2 text-2xl font-semibold text-base-content/70 tabular-nums w-[4.5ch] text-right"
             style={"top: #{sunset_pct}%"}
             id="sunset-label"
           >
@@ -389,4 +393,133 @@ defmodule WeatherServerWeb.DashboardComponents do
     </section>
     """
   end
+
+  attr :hours, :list, required: true
+  attr :sunrise, :any, required: true
+  attr :sunset, :any, required: true
+  attr :class, :string, default: ""
+
+  def hour_forecast(assigns) do
+    assigns =
+      assigns
+      |> assign(
+        :precip_max_mm,
+        @precip_max_mm
+      )
+      |> assign(
+        :precip_scaling_factor,
+        @precip_scaling_factor
+      )
+
+    ~H"""
+    <section
+      id="hour-forecast"
+      class={[
+        "
+        card bg-base-200/90 border border-base-300/70
+        shadow-xl rounded-2xl backdrop-blur
+        p-2 min-h-0 overflow-visible h-full
+        flex flex-col relative z-30
+        glossy-top-border
+        ",
+        @class
+      ]}
+    >
+      <% hours = @hours || []
+      entries = build_hour_timeline(hours, @sunrise, @sunset) %>
+
+      <div class="flex gap-3 h-full items-stretch w-full">
+        <.tooltip
+          :for={entry <- entries}
+          text={entry.condition_text}
+          position="tooltip-top"
+          wrapper_class="flex flex-1 basis-0 min-w-0 h-full"
+          class="
+          relative z-40 px-1 py-1
+          "
+        >
+          <div class="grid h-full w-full grid-rows-[auto_1fr_auto] justify-items-center">
+            <div class="text-[11px] leading-none text-base-content/60 font-semibold tracking-wide tabular-nums">
+              {Calendar.strftime(entry.time, "%H:%M")}
+            </div>
+
+            <div class="flex items-center justify-center w-full">
+              <img
+                src={entry.icon}
+                alt={entry.condition_text}
+                class="w-9 h-9 object-contain drop-shadow-sm"
+              />
+            </div>
+
+            <div class="flex flex-col items-center gap-0.5 leading-none">
+              <%= if entry.kind in [:sunrise, :sunset] do %>
+                <div class="text-base opacity-0" aria-hidden="true">0°</div>
+                <div class="h-10 w-3 opacity-0" aria-hidden="true"></div>
+                <div class="text-[10px] font-semibold text-base-content/60 tabular-nums">
+                  {entry.label}
+                </div>
+              <% else %>
+                <div class="text-base font-semibold text-base-content/80 tabular-nums">
+                  {entry.temp_c}°
+                </div>
+                <% bar_height =
+                  entry.precip_mm
+                  |> min(@precip_max_mm)
+                  |> then(fn value ->
+                    :math.log(1.0 + @precip_scaling_factor * value) /
+                      :math.log(1.0 + @precip_scaling_factor * @precip_max_mm) * 100.0
+                  end)
+                  |> max(0.0)
+                  |> Float.round(1) %>
+                <div class="h-10 w-3 rounded-full bg-base-100/60 border border-base-300/70 relative overflow-hidden">
+                  <div
+                    class="absolute bottom-0 inset-x-0 bg-sky-400/80 rounded-full"
+                    style={"height: #{bar_height}%"}
+                  >
+                  </div>
+                </div>
+
+                <div class="text-[10px] text-base-content/60 tabular-nums">
+                  {entry.precip_mm}mm
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </.tooltip>
+      </div>
+    </section>
+    """
+  end
+
+  defp build_hour_timeline(hours, sunrise, sunset) do
+    hour_entries =
+      Enum.map(hours, fn hour ->
+        Map.put(hour, :kind, :hour)
+      end)
+
+    sun_entries =
+      []
+      |> maybe_add_sun_entry(sunrise, :sunrise, "Sunrise", "/images/weather/sun-rise.png")
+      |> maybe_add_sun_entry(sunset, :sunset, "Sunset", "/images/weather/sun-set.png")
+
+    (hour_entries ++ sun_entries)
+    |> Enum.sort_by(&time_sort_key(&1.time))
+  end
+
+  defp maybe_add_sun_entry(entries, %Time{} = time, kind, label, icon) do
+    entries ++
+      [
+        %{
+          time: time,
+          kind: kind,
+          label: label,
+          condition_text: label,
+          icon: icon
+        }
+      ]
+  end
+
+  defp maybe_add_sun_entry(entries, _time, _kind, _label, _icon), do: entries
+
+  defp time_sort_key(%Time{} = time), do: {time.hour, time.minute, time.second}
 end

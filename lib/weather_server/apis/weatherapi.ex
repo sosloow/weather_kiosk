@@ -3,6 +3,8 @@ defmodule WeatherServer.Apis.WeatherApi do
   Fetches weather data.
   """
 
+  alias WeatherServer.Utils
+
   defmodule WeatherData do
     @type current :: %{
             is_day: integer(),
@@ -25,14 +27,47 @@ defmodule WeatherServer.Apis.WeatherApi do
             icon: String.t()
           }
 
+    @type hourly_forecast :: %{
+            time: Time.t(),
+            temp_c: integer(),
+            condition_text: String.t(),
+            icon: String.t(),
+            humidity: integer(),
+            wind_kph: integer(),
+            pressure_mb: integer(),
+            precip_mm: number(),
+            precip_chance: integer()
+          }
+
+    @type astro :: %{
+            sunrise_at: Time.t(),
+            sunset_at: Time.t(),
+            moonrise_at: Time.t(),
+            moonset_at: Time.t(),
+            moon_phase: String.t(),
+            is_moon_up: boolean(),
+            is_sun_up: boolean()
+          }
+
     @type t :: %__MODULE__{
             location: map(),
             current: current(),
             forecast: [forecast_day()],
+            astro: astro(),
+            hourly_forecast: [hourly_forecast()],
+            hourly_forecast_condensed: [hourly_forecast()],
             last_updated: DateTime.t()
           }
 
-    defstruct [:location, :current, :forecast, :last_updated]
+    defstruct [
+      :location,
+      :current,
+      :forecast,
+      :astro,
+      :hourly_forecast,
+      :hourly_forecast_condensed,
+      :last_updated
+    ]
   end
 
   @spec fetch(String.t()) :: {:ok, WeatherData.t()} | {:error, String.t()}
@@ -50,16 +85,30 @@ defmodule WeatherServer.Apis.WeatherApi do
     |> handle_response()
   end
 
-  defp handle_response({:ok, %Req.Response{status: 200, body: body}}) do
+  defp handle_response(
+         {:ok,
+          %Req.Response{
+            status: 200,
+            body: %{"forecast" => %{"forecastday" => [current_forecast_day | _]}} = body
+          }}
+       ) do
+    hourly_forecast = normalize_hourly_forecast(current_forecast_day["hour"])
+
     weather = %WeatherData{
       location: body["location"],
       current: normalize_current(body["current"]),
       forecast: normalize_forecast(body["forecast"]),
+      astro: normalize_astro(current_forecast_day["astro"]),
+      hourly_forecast: hourly_forecast,
+      hourly_forecast_condensed: condense_hourly_forecast(hourly_forecast),
       last_updated: DateTime.utc_now()
     }
 
     {:ok, weather}
   end
+
+  defp handle_response({:ok, %Req.Response{status: 200}}),
+    do: {:error, "Invalid response"}
 
   defp handle_response({:ok, %{status: status}}), do: {:error, "HTTP #{status}"}
   defp handle_response({:error, _}), do: {:error, "Network Error"}
@@ -85,6 +134,18 @@ defmodule WeatherServer.Apis.WeatherApi do
     }
   end
 
+  defp normalize_astro(data) do
+    %{
+      sunrise_at: Utils.Time.parse_time_12h!(data["sunrise"]),
+      sunset_at: Utils.Time.parse_time_12h!(data["sunset"]),
+      moonrise_at: Utils.Time.parse_time_12h!(data["moonrise"]),
+      moonset_at: Utils.Time.parse_time_12h!(data["moonset"]),
+      moon_phase: data["moon_phase"],
+      is_moon_up: data["is_moon_up"] == 1,
+      is_sun_up: data["is_sun_up"] == 1
+    }
+  end
+
   defp normalize_forecast(data) do
     get_in(data, ["forecastday"])
     |> Enum.map(fn day ->
@@ -97,6 +158,50 @@ defmodule WeatherServer.Apis.WeatherApi do
         icon: build_icon_path(icon_path(day["day"]["condition"]["code"], 1))
       }
     end)
+  end
+
+  defp normalize_hourly_forecast(data) do
+    Enum.map(data, fn hour ->
+      [_, time_part] = String.split(hour["time"], " ")
+      [hour_str, minute_str] = String.split(time_part, ":")
+      hour_val = String.to_integer(hour_str)
+      minute_val = String.to_integer(minute_str)
+
+      %{
+        time: Time.new!(hour_val, minute_val, 0),
+        temp_c: round(hour["temp_c"]),
+        condition_text: hour["condition"]["text"],
+        icon: build_icon_path(icon_path(hour["condition"]["code"], hour["is_day"])),
+        humidity: hour["humidity"],
+        wind_kph: round(hour["wind_kph"]),
+        pressure_mb: round(hour["pressure_mb"]),
+        precip_mm: hour["precip_mm"],
+        precip_chance: max(hour["chance_of_rain"], hour["chance_of_snow"])
+      }
+    end)
+  end
+
+  defp condense_hourly_forecast(hours) do
+    hours
+    |> Enum.take(24)
+    |> Enum.chunk_every(3, 3, :discard)
+    |> Enum.map(&aggregate_hour_chunk/1)
+  end
+
+  defp aggregate_hour_chunk(hours) do
+    center = Enum.at(hours, 1) || List.first(hours)
+
+    %{
+      time: center.time,
+      temp_c: Utils.Math.avg_round(hours, & &1.temp_c),
+      condition_text: center.condition_text,
+      icon: center.icon,
+      humidity: Utils.Math.avg_round(hours, & &1.humidity),
+      wind_kph: Utils.Math.avg_round(hours, & &1.wind_kph),
+      pressure_mb: Utils.Math.avg_round(hours, & &1.pressure_mb),
+      precip_mm: Utils.Math.sum_round(hours, & &1.precip_mm),
+      precip_chance: Utils.Math.avg_round(hours, & &1.precip_chance)
+    }
   end
 
   defp build_icon_path(name), do: "/images/weather/#{name}.png"

@@ -110,6 +110,7 @@ convert_icon "moon-75.svg" "moon-75" "$SUN_MOON_FILL_COLOR"
 convert_icon "moon-100.svg" "moon-100" "$SUN_MOON_FILL_COLOR"
 convert_icon "sun-low.svg" "sun-low" "$SUN_MOON_FILL_COLOR"
 convert_icon "sun-lower.svg" "sun-lower" "$SUN_MOON_FILL_COLOR"
+convert_icon "sun-rise.svg" "sun-rise" "$SUN_MOON_FILL_COLOR"
 convert_icon "sun-set.svg" "sun-set" "$SUN_MOON_FILL_COLOR"
 
 echo ""

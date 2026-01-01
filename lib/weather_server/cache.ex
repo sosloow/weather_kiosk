@@ -77,7 +77,6 @@ defmodule WeatherServer.Cache do
     end
   end
 
-  defp valid_data?(nil), do: false
-  defp valid_data?({:error, _}), do: false
-  defp valid_data?(_), do: true
+  defp valid_data?(%{weather: %WeatherApi.WeatherData{}, aqi: %{} = _aqi}), do: true
+  defp valid_data?(_), do: false
 end

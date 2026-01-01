@@ -80,6 +80,40 @@ defmodule WeatherServerWeb.CoreComponents do
   end
 
   @doc """
+  Renders a tooltip wrapper.
+
+  ## Examples
+
+      <.tooltip text="AQI 42" class="inline-flex">
+        <span>Hover me</span>
+      </.tooltip>
+  """
+  attr :text, :string, required: true
+  attr :position, :string, default: "tooltip-top"
+  attr :class, :string, default: ""
+  attr :wrapper_class, :string, default: ""
+  attr :rest, :global, doc: "additional HTML attributes for the wrapper"
+
+  slot :inner_block, required: true
+
+  def tooltip(assigns) do
+    ~H"""
+    <div
+      class={[
+        "tooltip",
+        @position,
+        @class,
+        @wrapper_class
+      ]}
+      data-tip={@text}
+      {@rest}
+    >
+      {render_slot(@inner_block)}
+    </div>
+    """
+  end
+
+  @doc """
   Renders a button with navigation support.
 
   ## Examples
