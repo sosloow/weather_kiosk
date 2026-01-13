@@ -5,6 +5,7 @@ defmodule WeatherServer.Cache do
   alias WeatherServer.Apis.WeatherApi
 
   @topic "dashboard_updates"
+  @refresh_period 15 * 60 * 1000
 
   @type payload :: %{
           weather: WeatherApi.WeatherData.t(),
@@ -65,7 +66,7 @@ defmodule WeatherServer.Cache do
     end
   end
 
-  defp schedule_next_fetch, do: Process.send_after(self(), :tick, 15 * 60 * 1000)
+  defp schedule_next_fetch, do: Process.send_after(self(), :tick, @refresh_period)
 
   @spec fetch_external_api() :: {:ok, payload()} | {:error, term()}
   defp fetch_external_api do

@@ -539,7 +539,7 @@ defmodule WeatherServerWeb.CoreComponents do
     card bg-base-200/90 border border-base-300/70
     shadow-xl rounded-2xl backdrop-blur
     min-h-0 h-full relative
-    z-20 overflow-hidden
+    z-20 overflow-visible
     glossy-top-border
     ", @class]}>
       {render_slot(@inner_block)}

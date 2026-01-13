@@ -4,6 +4,7 @@ defmodule WeatherServer.Apis.WeatherApi do
   """
 
   alias WeatherServer.Utils
+  alias WeatherServer.WeatherAlerts
 
   defmodule WeatherData do
     @type current :: %{
@@ -30,7 +31,9 @@ defmodule WeatherServer.Apis.WeatherApi do
     @type hourly_forecast :: %{
             time: Time.t(),
             temp_c: integer(),
+            feelslike_c: integer(),
             condition_text: String.t(),
+            condition_code: integer(),
             icon: String.t(),
             humidity: integer(),
             wind_kph: integer(),
@@ -56,6 +59,7 @@ defmodule WeatherServer.Apis.WeatherApi do
             astro: astro(),
             hourly_forecast: [hourly_forecast()],
             hourly_forecast_condensed: [hourly_forecast()],
+            alerts: [WeatherServer.WeatherAlerts.Alert.t()],
             last_updated: DateTime.t()
           }
 
@@ -66,6 +70,7 @@ defmodule WeatherServer.Apis.WeatherApi do
       :astro,
       :hourly_forecast,
       :hourly_forecast_condensed,
+      :alerts,
       :last_updated
     ]
   end
@@ -101,6 +106,7 @@ defmodule WeatherServer.Apis.WeatherApi do
       astro: normalize_astro(current_forecast_day["astro"]),
       hourly_forecast: hourly_forecast,
       hourly_forecast_condensed: condense_hourly_forecast(hourly_forecast),
+      alerts: WeatherAlerts.build_alerts(hourly_forecast),
       last_updated: DateTime.utc_now()
     }
 
@@ -170,7 +176,9 @@ defmodule WeatherServer.Apis.WeatherApi do
       %{
         time: Time.new!(hour_val, minute_val, 0),
         temp_c: round(hour["temp_c"]),
+        feelslike_c: round(hour["feelslike_c"]),
         condition_text: hour["condition"]["text"],
+        condition_code: hour["condition"]["code"],
         icon: build_icon_path(icon_path(hour["condition"]["code"], hour["is_day"])),
         humidity: hour["humidity"],
         wind_kph: round(hour["wind_kph"]),
@@ -194,7 +202,9 @@ defmodule WeatherServer.Apis.WeatherApi do
     %{
       time: center.time,
       temp_c: Utils.Math.avg_round(hours, & &1.temp_c),
+      feelslike_c: Utils.Math.avg_round(hours, & &1.feelslike_c),
       condition_text: center.condition_text,
+      condition_code: center.condition_code,
       icon: center.icon,
       humidity: Utils.Math.avg_round(hours, & &1.humidity),
       wind_kph: Utils.Math.avg_round(hours, & &1.wind_kph),

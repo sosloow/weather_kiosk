@@ -2,6 +2,7 @@ defmodule WeatherServer.Apis.WeatherApiTest do
   use WeatherServer.DataCase, async: true
 
   alias WeatherServer.Apis.WeatherApi
+  alias WeatherServer.Utils.Time, as: TimeUtils
 
   @forecast_fixture File.read!("test/fixtures/weatherapi/forecast.json")
 
@@ -100,6 +101,41 @@ defmodule WeatherServer.Apis.WeatherApiTest do
       end)
 
       assert {:error, "HTTP 500"} = WeatherApi.fetch("Nowhere")
+    end
+
+    test "returns alerts based on hourly forecast" do
+      future_time =
+        case TimeUtils.local_now_time() do
+          %Time{} = now -> Time.add(now, 3600, :second)
+          _ -> Time.add(Time.utc_now(), 3600, :second)
+        end
+
+      fixture =
+        @forecast_fixture
+        |> Jason.decode!()
+        |> put_in(
+          ["forecast", "forecastday", Access.at(0), "hour", Access.at(0)],
+          %{
+            "chance_of_rain" => 90,
+            "chance_of_snow" => 0,
+            "condition" => %{"code" => 1195, "text" => "Heavy rain"},
+            "feelslike_c" => 6.0,
+            "humidity" => 88,
+            "is_day" => 1,
+            "precip_mm" => 12.0,
+            "pressure_mb" => 1008.0,
+            "temp_c" => 7.0,
+            "time" => "2025-12-10 #{Calendar.strftime(future_time, "%H:%M")}",
+            "wind_kph" => 22.0
+          }
+        )
+
+      Req.Test.stub(WeatherApi, fn conn ->
+        Req.Test.json(conn, fixture)
+      end)
+
+      assert {:ok, %WeatherApi.WeatherData{} = data} = WeatherApi.fetch("Yerevan")
+      assert [%{code: :flood_risk, severity: :danger}] = data.alerts
     end
   end
 end

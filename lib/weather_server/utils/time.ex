@@ -42,4 +42,7 @@ defmodule WeatherServer.Utils.Time do
   def time_from_datetime(%DateTime{} = dt) do
     DateTime.to_time(dt)
   end
+
+  @spec time_sort_key(Time.t()) :: {integer(), integer(), integer()}
+  def time_sort_key(%Time{} = time), do: {time.hour, time.minute, time.second}
 end

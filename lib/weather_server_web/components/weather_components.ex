@@ -4,9 +4,6 @@ defmodule WeatherServerWeb.WeatherComponents do
   import WeatherServer.Utils.Weather
   import WeatherServer.Utils.Time
 
-  @precip_max_mm 15.0
-  @precip_scaling_factor 4.0
-
   defp aqi_to_label(1), do: "Clean"
   defp aqi_to_label(2), do: "Fair"
   defp aqi_to_label(3), do: "Sensitive"
@@ -206,15 +203,117 @@ defmodule WeatherServerWeb.WeatherComponents do
     """
   end
 
+  defp alert_text_color(nil), do: "text-emerald-400"
+  defp alert_text_color(%{severity: :mild}), do: "text-amber-400"
+  defp alert_text_color(%{severity: :strong}), do: "text-orange-400"
+  defp alert_text_color(%{severity: :danger}), do: "text-rose-400"
+  defp alert_text_color(_), do: "text-stone-400"
+
+  defp alert_bg_color(nil), do: "bg-emerald-400/40"
+  defp alert_bg_color(%{severity: :mild}), do: "bg-amber-400/40"
+  defp alert_bg_color(%{severity: :strong}), do: "bg-orange-400/40"
+  defp alert_bg_color(%{severity: :danger}), do: "bg-rose-400/40"
+  defp alert_bg_color(_), do: "bg-stone-400/40"
+
+  defp alert_icon(nil), do: %{type: :icon, value: "hero-check-circle"}
+
+  defp alert_icon(%{code: :drizzle}),
+    do: %{type: :image, value: "/images/weather/light-drizzle.png"}
+
+  defp alert_icon(%{code: :breezy}), do: %{type: :image, value: "/images/weather/wind.png"}
+  defp alert_icon(%{code: :sticky}), do: %{type: :image, value: "/images/weather/wet.png"}
+
+  defp alert_icon(%{code: :frost}),
+    do: %{type: :image, value: "/images/weather/freezing-drizzle.png"}
+
+  defp alert_icon(%{code: :heavy_rain}),
+    do: %{type: :image, value: "/images/weather/heavy-rain.png"}
+
+  defp alert_icon(%{code: :thunderstorm}),
+    do: %{type: :image, value: "/images/weather/thundery-outbreaks.png"}
+
+  defp alert_icon(%{code: :strong_wind}), do: %{type: :image, value: "/images/weather/wind.png"}
+  defp alert_icon(%{code: :strong_heat}), do: %{type: :image, value: "/images/weather/sunny.png"}
+
+  defp alert_icon(%{code: :strong_cold}),
+    do: %{type: :image, value: "/images/weather/light-snow.png"}
+
+  defp alert_icon(%{code: :fog}), do: %{type: :image, value: "/images/weather/fog.png"}
+
+  defp alert_icon(%{code: :severe_ice}),
+    do: %{type: :image, value: "/images/weather/ice-pellets.png"}
+
+  defp alert_icon(%{code: :severe_wind}), do: %{type: :image, value: "/images/weather/wind.png"}
+  defp alert_icon(%{code: :extreme_heat}), do: %{type: :image, value: "/images/weather/sunny.png"}
+
+  defp alert_icon(%{code: :extreme_cold}),
+    do: %{type: :image, value: "/images/weather/blizzard.png"}
+
+  defp alert_icon(%{code: :flood_risk}),
+    do: %{type: :image, value: "/images/weather/torrential-rain-shower.png"}
+
+  defp alert_icon(%{code: :thunderstorm_wind}),
+    do: %{type: :image, value: "/images/weather/thundery-outbreaks.png"}
+
+  defp alert_icon(_), do: %{type: :icon, value: "hero-exclamation-triangle"}
+
+  defp alert_headline(nil), do: "All clear"
+  defp alert_headline(%{text: text}), do: text
+
+  defp alert_time_range(nil), do: "Next 24h"
+
+  defp alert_time_range(%{starts_at: starts_at, ends_at: ends_at}) do
+    "#{format_local_time(starts_at)} - #{format_local_time(ends_at)}"
+  end
+
+  attr :alerts, :list, default: []
+
+  def alerts_section(assigns) do
+    alert = List.first(assigns.alerts)
+    icon = alert_icon(alert)
+
+    assigns =
+      assigns
+      |> assign(:alert, alert)
+      |> assign(:icon, icon)
+
+    ~H"""
+    <div
+      id="weather-alerts"
+      class={
+        "flex flex-col items-center justify-center relative p-4 pb-0 gap-2 flex-1 min-h-0 " <>
+          alert_text_color(@alert)
+      }
+    >
+      <div class={"absolute inset-0 opacity-10 " <> alert_bg_color(@alert)}></div>
+      <div class="absolute top-2 inset-x-0 text-[11px] font-semibold uppercase tracking-[0.6px] text-base-content/60 text-center">
+        Weather Alert
+      </div>
+
+      <div class="transition-transform duration-500 group-hover:scale-110">
+        <%= if @icon.type == :image do %>
+          <img src={@icon.value} alt="" class="w-20 h-20 object-contain drop-shadow-sm" />
+        <% else %>
+          <.icon name={@icon.value} class="w-20 h-20" />
+        <% end %>
+      </div>
+    </div>
+
+    <div class="h-[100px] min-h-0 px-4 pb-3 pt-1 flex flex-col items-center justify-center gap-2 text-center">
+      <div class="text-[15px] font-semibold text-base-content/80">{alert_headline(@alert)}</div>
+      <div class="text-[11px] text-base-content/60 uppercase tracking-[0.4px]">
+        {alert_time_range(@alert)}
+      </div>
+    </div>
+    """
+  end
+
   attr :hours, :list, required: true
   attr :sunrise, :any, required: true
   attr :sunset, :any, required: true
   attr :class, :string, default: ""
 
   def hour_forecast(assigns) do
-    precip_max_mm = @precip_max_mm
-    precip_scaling_factor = @precip_scaling_factor
-
     entries =
       assigns.hours
       |> List.wrap()
@@ -223,21 +322,15 @@ defmodule WeatherServerWeb.WeatherComponents do
     assigns =
       assigns
       |> assign(:entries, entries)
-      |> assign(:precip_max_mm, precip_max_mm)
-      |> assign(:precip_scaling_factor, precip_scaling_factor)
 
     ~H"""
-    <div id="hour-forecast" class={["p-2 flex flex-col", @class]}>
-      <div class="flex gap-3 h-full items-stretch w-full">
+    <div id="hour-forecast" class={["p-2 flex flex-col h-full min-h-0", @class]}>
+      <div class="flex flex-1 gap-3 items-stretch w-full">
         <%= for entry <- @entries do %>
           <%= if entry.kind in [:sunrise, :sunset] do %>
             <.hour_forecast_sun entry={entry} />
           <% else %>
-            <.hour_forecast_hour
-              entry={entry}
-              precip_max_mm={@precip_max_mm}
-              precip_scaling_factor={@precip_scaling_factor}
-            />
+            <.hour_forecast_hour entry={entry} />
           <% end %>
         <% end %>
       </div>
@@ -256,7 +349,7 @@ defmodule WeatherServerWeb.WeatherComponents do
       class="relative z-40 px-1 py-1"
     >
       <div class="grid h-full min-h-0 w-full justify-items-center grid-rows-[auto_1fr_auto]">
-        <div class="text-[11px] leading-none text-base-content/60 font-semibold tracking-wide tabular-nums">
+        <div class="text-[12px] leading-none text-base-content/60 font-semibold tracking-wide tabular-nums">
           {Calendar.strftime(@entry.time, "%H:%M")}
         </div>
 
@@ -264,11 +357,11 @@ defmodule WeatherServerWeb.WeatherComponents do
           <img
             src={@entry.icon}
             alt={@entry.condition_text}
-            class="w-9 h-9 object-contain drop-shadow-sm"
+            class="w-11 h-11 object-contain drop-shadow-sm"
           />
         </div>
 
-        <div class="text-[12px] text-base-content/60 tabular-nums leading-none">
+        <div class="text-[13px] text-base-content/60 tabular-nums leading-none">
           {@entry.label}
         </div>
       </div>
@@ -277,8 +370,8 @@ defmodule WeatherServerWeb.WeatherComponents do
   end
 
   attr :entry, :map, required: true
-  attr :precip_max_mm, :float, required: true
-  attr :precip_scaling_factor, :float, required: true
+  attr :precip_max_mm, :float, default: 15.0
+  attr :precip_scaling_factor, :float, default: 4.0
 
   def hour_forecast_hour(assigns) do
     bar_height =
@@ -298,7 +391,7 @@ defmodule WeatherServerWeb.WeatherComponents do
       class="relative z-40 px-1 py-1"
     >
       <div class="grid h-full min-h-0 w-full justify-items-center grid-rows-[auto_1fr_auto]">
-        <div class="text-[11px] leading-none text-base-content/60 font-semibold tracking-wide tabular-nums">
+        <div class="text-[12px] leading-none text-base-content/60 font-semibold tracking-wide tabular-nums">
           {Calendar.strftime(@entry.time, "%H:%M")}
         </div>
 
@@ -306,23 +399,23 @@ defmodule WeatherServerWeb.WeatherComponents do
           <img
             src={@entry.icon}
             alt={@entry.condition_text}
-            class="w-9 h-9 object-contain drop-shadow-sm"
+            class="w-11 h-11 object-contain drop-shadow-sm"
           />
         </div>
 
         <div class="flex flex-col items-center gap-1 leading-none">
-          <div class="text-base font-semibold text-base-content/80 tabular-nums">
+          <div class="text-[16px] font-semibold text-base-content/80 tabular-nums">
             {@entry.temp_c}°
           </div>
 
-          <div class="h-10 w-3 rounded-full bg-base-100/60 border border-base-300/70 relative overflow-hidden">
+          <div class="h-10 w-3 rounded-full bg-base-100 border border-base-300/70 relative overflow-hidden">
             <div
               class="absolute bottom-0 inset-x-0 bg-sky-400/80 rounded-full"
               style={"height: #{@bar_height}%"}
             />
           </div>
 
-          <div class="text-[11px] text-base-content/60 tabular-nums">
+          <div class="text-[12px] text-base-content/60 tabular-nums">
             {@entry.precip_mm}mm
           </div>
         </div>
@@ -359,8 +452,6 @@ defmodule WeatherServerWeb.WeatherComponents do
   end
 
   defp maybe_add_sun_entry(entries, _time, _kind, _label, _icon), do: entries
-
-  defp time_sort_key(%Time{} = time), do: {time.hour, time.minute, time.second}
 
   defp precip_bar_height(precip_mm, precip_max_mm, precip_scaling_factor)
        when is_number(precip_mm) and is_number(precip_max_mm) and is_number(precip_scaling_factor) do
