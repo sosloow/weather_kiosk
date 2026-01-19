@@ -204,13 +204,13 @@ defmodule WeatherServerWeb.WeatherComponents do
   end
 
   defp alert_text_color(nil), do: "text-emerald-400"
-  defp alert_text_color(%{severity: :mild}), do: "text-amber-400"
+  defp alert_text_color(%{severity: :mild}), do: "text-sky-300"
   defp alert_text_color(%{severity: :strong}), do: "text-orange-400"
   defp alert_text_color(%{severity: :danger}), do: "text-rose-400"
   defp alert_text_color(_), do: "text-stone-400"
 
   defp alert_bg_color(nil), do: "bg-emerald-400/40"
-  defp alert_bg_color(%{severity: :mild}), do: "bg-amber-400/40"
+  defp alert_bg_color(%{severity: :mild}), do: "bg-sky-400/30"
   defp alert_bg_color(%{severity: :strong}), do: "bg-orange-400/40"
   defp alert_bg_color(%{severity: :danger}), do: "bg-rose-400/40"
   defp alert_bg_color(_), do: "bg-stone-400/40"
@@ -266,6 +266,16 @@ defmodule WeatherServerWeb.WeatherComponents do
     "#{format_local_time(starts_at)} - #{format_local_time(ends_at)}"
   end
 
+  defp alert_value_line(nil), do: ""
+
+  defp alert_value_line(%{value: value, value_label: label})
+       when is_binary(label) and label != "" do
+    "#{label} #{value}"
+  end
+
+  defp alert_value_line(%{value: value}) when is_binary(value), do: value
+  defp alert_value_line(_), do: ""
+
   attr :alerts, :list, default: []
 
   def alerts_section(assigns) do
@@ -297,10 +307,19 @@ defmodule WeatherServerWeb.WeatherComponents do
           <.icon name={@icon.value} class="w-20 h-20" />
         <% end %>
       </div>
+
+      <div class="text-center z-10">
+        <h3 class="text-2xl font-black tracking-tight">
+          {alert_headline(@alert)}
+        </h3>
+        <p class="text-xs font-medium text-base-content/60 uppercase tracking-widest mt-1"></p>
+      </div>
     </div>
 
     <div class="h-[100px] min-h-0 px-4 pb-3 pt-1 flex flex-col items-center justify-center gap-2 text-center">
-      <div class="text-[15px] font-semibold text-base-content/80">{alert_headline(@alert)}</div>
+      <div class="text-[13px] font-semibold text-base-content/80">
+        {alert_value_line(@alert)}
+      </div>
       <div class="text-[11px] text-base-content/60 uppercase tracking-[0.4px]">
         {alert_time_range(@alert)}
       </div>
@@ -416,7 +435,7 @@ defmodule WeatherServerWeb.WeatherComponents do
           </div>
 
           <div class="text-[12px] text-base-content/60 tabular-nums">
-            {@entry.precip_mm}mm
+            {@entry.precip_mm} mm
           </div>
         </div>
       </div>

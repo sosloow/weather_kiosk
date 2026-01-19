@@ -11,7 +11,11 @@ defmodule WeatherServer.MixProject do
       aliases: aliases(),
       deps: deps(),
       compilers: [:phoenix_live_view] ++ Mix.compilers(),
-      listeners: [Phoenix.CodeReloader]
+      listeners: [Phoenix.CodeReloader],
+      dialyzer: [
+        plt_add_deps: :app_tree,
+        plt_add_apps: []
+      ]
     ]
   end
 
@@ -91,7 +95,13 @@ defmodule WeatherServer.MixProject do
         "esbuild weather_server --minify",
         "phx.digest"
       ],
-      precommit: ["compile --warnings-as-errors", "deps.unlock --unused", "format", "test"]
+      precommit: [
+        "compile --warnings-as-errors",
+        "deps.unlock --unused",
+        "format",
+        "test",
+        "cmd env MIX_ENV=dev mix dialyzer"
+      ]
     ]
   end
 end

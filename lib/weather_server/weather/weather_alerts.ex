@@ -5,8 +5,8 @@ defmodule WeatherServer.WeatherAlerts do
   @type category :: :precipitation | :temperature | :wind | :other
 
   defmodule Alert do
-    @enforce_keys [:id, :code, :severity, :text, :starts_at, :ends_at]
-    defstruct [:id, :code, :severity, :text, :starts_at, :ends_at]
+    @enforce_keys [:id, :code, :severity, :text, :starts_at, :ends_at, :value, :value_label]
+    defstruct [:id, :code, :severity, :text, :starts_at, :ends_at, :value, :value_label]
 
     @type t :: %__MODULE__{
             id: String.t(),
@@ -14,7 +14,9 @@ defmodule WeatherServer.WeatherAlerts do
             severity: WeatherServer.WeatherAlerts.severity(),
             text: String.t(),
             starts_at: Time.t(),
-            ends_at: Time.t()
+            ends_at: Time.t(),
+            value: String.t(),
+            value_label: String.t()
           }
   end
 
@@ -31,30 +33,30 @@ defmodule WeatherServer.WeatherAlerts do
     mild_heat: 28,
     strong_heat: 33,
     extreme_heat: 39,
-    mild_cold: 2,
-    strong_cold: -5,
-    extreme_cold: -12
+    mild_cold: -10,
+    strong_cold: -20,
+    extreme_cold: -30
   }
   @humidity_thresholds %{sticky: 70, sticky_temp: 24}
   @ice_thresholds %{range_low: -2, range_high: 1, mild_precip: 0.2, severe_precip: 0.5}
 
   @rules [
-    %{code: :drizzle, severity: :mild, category: :precipitation, text: "Light rain or drizzle"},
-    %{code: :breezy, severity: :mild, category: :wind, text: "Breezy winds"},
-    %{code: :sticky, severity: :mild, category: :temperature, text: "Damp and sticky"},
-    %{code: :frost, severity: :mild, category: :temperature, text: "Frost or icy spots"},
-    %{code: :heavy_rain, severity: :strong, category: :precipitation, text: "Heavy soaking rain"},
+    %{code: :drizzle, severity: :mild, category: :precipitation, text: "Light rain"},
+    %{code: :breezy, severity: :mild, category: :wind, text: "Breezy"},
+    %{code: :sticky, severity: :mild, category: :temperature, text: "Sticky air"},
+    %{code: :frost, severity: :mild, category: :temperature, text: "Icy spots"},
+    %{code: :heavy_rain, severity: :strong, category: :precipitation, text: "Heavy rain"},
     %{
       code: :thunderstorm,
       severity: :strong,
       category: :precipitation,
-      text: "Thunderstorms nearby"
+      text: "Thunderstorm"
     },
     %{code: :strong_wind, severity: :strong, category: :wind, text: "Strong wind"},
     %{code: :strong_heat, severity: :strong, category: :temperature, text: "Strong heat"},
     %{code: :strong_cold, severity: :strong, category: :temperature, text: "Strong cold"},
-    %{code: :fog, severity: :strong, category: :other, text: "Foggy conditions"},
-    %{code: :severe_ice, severity: :strong, category: :other, text: "Severe ice on the ground"},
+    %{code: :fog, severity: :strong, category: :other, text: "Fog"},
+    %{code: :severe_ice, severity: :strong, category: :other, text: "Severe ice"},
     %{code: :severe_wind, severity: :danger, category: :wind, text: "Severe wind"},
     %{code: :extreme_heat, severity: :danger, category: :temperature, text: "Extreme heat"},
     %{code: :extreme_cold, severity: :danger, category: :temperature, text: "Extreme cold"},
@@ -62,13 +64,13 @@ defmodule WeatherServer.WeatherAlerts do
       code: :flood_risk,
       severity: :danger,
       category: :precipitation,
-      text: "Flood risk from rain"
+      text: "Flood risk"
     },
     %{
       code: :thunderstorm_wind,
       severity: :danger,
       category: :precipitation,
-      text: "Thunderstorm with strong wind"
+      text: "Storm wind"
     }
   ]
 
@@ -90,7 +92,7 @@ defmodule WeatherServer.WeatherAlerts do
           Time.compare(hour.time, now) != :lt
         end)
 
-      _ ->
+      {:error, _reason} ->
         hours
     end
   end
@@ -108,22 +110,25 @@ defmodule WeatherServer.WeatherAlerts do
 
   defp build_time_windows([first | rest]) do
     rest
-    |> Enum.reduce([%{start: first.time, finish: first.time}], fn hour, [current | acc] ->
+    |> Enum.reduce([%{start: first.time, finish: first.time, hours: [first]}], fn hour,
+                                                                                  [current | acc] ->
       if consecutive?(current.finish, hour.time) do
-        [%{current | finish: hour.time} | acc]
+        [%{current | finish: hour.time, hours: [hour | current.hours]} | acc]
       else
-        [%{start: hour.time, finish: hour.time} | [current | acc]]
+        [%{start: hour.time, finish: hour.time, hours: [hour]} | [current | acc]]
       end
     end)
     |> Enum.reverse()
+    |> Enum.map(fn window -> %{window | hours: Enum.reverse(window.hours)} end)
   end
 
   defp consecutive?(%Time{} = previous, %Time{} = current) do
     Time.add(previous, 3600, :second) == current
   end
 
-  defp build_alert(rule, %{start: start_time, finish: finish_time}) do
+  defp build_alert(rule, %{start: start_time, finish: finish_time, hours: hours}) do
     end_time = Time.add(finish_time, 3600, :second)
+    {value, value_label} = alert_value(rule.code, hours)
 
     %Alert{
       id: "#{rule.code}-#{Time.to_iso8601(start_time)}",
@@ -131,7 +136,9 @@ defmodule WeatherServer.WeatherAlerts do
       severity: rule.severity,
       text: rule.text,
       starts_at: start_time,
-      ends_at: end_time
+      ends_at: end_time,
+      value: value,
+      value_label: value_label
     }
   end
 
@@ -164,6 +171,58 @@ defmodule WeatherServer.WeatherAlerts do
   end
 
   defp time_to_seconds(%Time{} = time), do: time.hour * 3600 + time.minute * 60 + time.second
+
+  defp alert_value(code, hours) do
+    case code do
+      :drizzle -> {format_mm(max_value(hours, :precip_mm)), "Rain"}
+      :heavy_rain -> {format_mm(max_value(hours, :precip_mm)), "Rain"}
+      :flood_risk -> {format_mm(max_value(hours, :precip_mm)), "Rain"}
+      :thunderstorm -> {format_mm(max_value(hours, :precip_mm)), "Rain"}
+      :thunderstorm_wind -> {format_kph(max_value(hours, :wind_kph)), "Wind"}
+      :breezy -> {format_kph(max_value(hours, :wind_kph)), "Wind"}
+      :strong_wind -> {format_kph(max_value(hours, :wind_kph)), "Wind"}
+      :severe_wind -> {format_kph(max_value(hours, :wind_kph)), "Wind"}
+      :strong_heat -> {format_temp(max_value(hours, :feelslike_c)), "Feels like"}
+      :extreme_heat -> {format_temp(max_value(hours, :feelslike_c)), "Feels like"}
+      :strong_cold -> {format_temp(min_value(hours, :feelslike_c)), "Feels like"}
+      :extreme_cold -> {format_temp(min_value(hours, :feelslike_c)), "Feels like"}
+      :frost -> {format_temp(min_value(hours, :feelslike_c)), "Feels like"}
+      :severe_ice -> {format_temp(min_value(hours, :feelslike_c)), "Feels like"}
+      :sticky -> {format_percent(max_value(hours, :humidity)), "Humidity"}
+      :fog -> {format_percent(max_value(hours, :humidity)), "Humidity"}
+      _ -> {"--", ""}
+    end
+  end
+
+  defp max_value(hours, key) do
+    hours
+    |> Enum.map(&value(&1, key))
+    |> Enum.max(fn -> 0 end)
+  end
+
+  defp min_value(hours, key) do
+    hours
+    |> Enum.map(&value(&1, key))
+    |> Enum.min(fn -> 0 end)
+  end
+
+  defp format_mm(value), do: "#{format_number(value)} mm"
+  defp format_kph(value), do: "#{format_number(value)} km/h"
+  defp format_temp(value), do: "#{format_number(value)}°"
+  defp format_percent(value), do: "#{format_number(value)}%"
+
+  defp format_number(value) when is_integer(value), do: Integer.to_string(value)
+
+  defp format_number(value) when is_float(value) do
+    rounded = Float.round(value, 1)
+
+    if rounded == Float.round(rounded, 0) do
+      Integer.to_string(trunc(rounded))
+    else
+      :io_lib.format("~.1f", [rounded])
+      |> List.to_string()
+    end
+  end
 
   defp match_rule?(hour, :drizzle) do
     precip = value(hour, :precip_mm)
@@ -217,7 +276,7 @@ defmodule WeatherServer.WeatherAlerts do
 
   defp match_rule?(hour, :fog) do
     text = condition_text(hour)
-    String.contains?(text, "fog") or String.contains?(text, "mist")
+    String.contains?(text, "fog")
   end
 
   defp match_rule?(hour, :severe_ice) do

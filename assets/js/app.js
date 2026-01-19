@@ -26,35 +26,58 @@ import { hooks as colocatedHooks } from "phoenix-colocated/weather_server";
 import topbar from "../vendor/topbar";
 
 let Hooks = {};
+const updateClockElements = (root = document) => {
+  const timeElement = root.querySelector("#time-display");
+  const dateElement = root.querySelector("#date-display");
+
+  if (timeElement && dateElement) {
+    const locale = "en-US";
+    const now = new Date();
+    const timeString = now.toLocaleTimeString(locale, {
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    const dayOfWeek = now.toLocaleDateString(locale, { weekday: "short" });
+    const date = now.toLocaleDateString(locale, {
+      month: "short",
+      day: "numeric",
+    });
+
+    timeElement.textContent = timeString;
+    dateElement.textContent = `${dayOfWeek}, ${date}`;
+  }
+};
+
 Hooks.Clock = {
   mounted() {
-    this.updateClock();
-    this.timer = setInterval(() => this.updateClock(), 30000);
+    updateClockElements(this.el);
+    this.timer = setInterval(() => updateClockElements(this.el), 30000);
+  },
+  updated() {
+    updateClockElements(this.el);
   },
   destroyed() {
     clearInterval(this.timer);
   },
-  updateClock() {
-    const timeElement = document.getElementById("time-display");
-    const dateElement = document.getElementById("date-display");
+};
 
-    if (timeElement && dateElement) {
-      const locale = "en-US";
-      const now = new Date();
-      const timeString = now.toLocaleTimeString(locale, {
-        hour12: false,
-        hour: "2-digit",
-        minute: "2-digit",
-      });
+updateClockElements();
 
-      const dayOfWeek = now.toLocaleDateString(locale, { weekday: "short" });
-      const date = now.toLocaleDateString(locale, {
-        month: "short",
-        day: "numeric",
-      });
-
-      timeElement.textContent = timeString;
-      dateElement.textContent = `${dayOfWeek}, ${date}`;
+Hooks.ThemeManager = {
+  mounted() {
+    this.applyTheme(this.el.dataset.theme);
+    this.handleEvent("theme:update", ({ theme }) => this.applyTheme(theme));
+  },
+  updated() {
+    this.applyTheme(this.el.dataset.theme);
+  },
+  applyTheme(theme) {
+    if (theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+    } else {
+      document.documentElement.removeAttribute("data-theme");
     }
   },
 };

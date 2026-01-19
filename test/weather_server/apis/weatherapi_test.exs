@@ -106,8 +106,8 @@ defmodule WeatherServer.Apis.WeatherApiTest do
     test "returns alerts based on hourly forecast" do
       future_time =
         case TimeUtils.local_now_time() do
-          %Time{} = now -> Time.add(now, 3600, :second)
-          _ -> Time.add(Time.utc_now(), 3600, :second)
+          %Time{} = now -> Time.add(now, 60, :second)
+          _ -> Time.add(Time.utc_now(), 60, :second)
         end
 
       fixture =

@@ -19,6 +19,7 @@ defmodule WeatherServerWeb.Router do
 
     get "/", PageController, :home
     live "/weather", WeatherLive
+    live "/settings", SettingsLive
   end
 
   # Other scopes may use custom stacks.

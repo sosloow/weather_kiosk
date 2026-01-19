@@ -1,10 +1,18 @@
 defmodule WeatherServerWeb.WeatherLive do
   use WeatherServerWeb, :live_view
   alias WeatherServer.Cache
+  alias WeatherServer.Settings
 
   @impl true
   def mount(_params, _session, socket) do
     if connected?(socket), do: Cache.subscribe()
+
+    theme = Settings.get_theme()
+
+    socket =
+      socket
+      |> assign(:theme, theme)
+      |> assign(:active_nav, :weather)
 
     with {:ok, %{weather: weather_data, aqi: aqi_data}} <- Cache.get_current_data() do
       socket =

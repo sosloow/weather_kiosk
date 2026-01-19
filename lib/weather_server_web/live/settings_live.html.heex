@@ -1,0 +1,108 @@
+<Layouts.app flash={@flash} header_title={@header_title} theme={@theme} active_nav={@active_nav}>
+  <div id="settings-shell" class="h-full grid grid-cols-[240px_1fr] gap-4">
+    <aside
+      id="settings-sidebar"
+      class="
+        flex flex-col gap-3
+        bg-base-200/80 border border-base-300/70
+        rounded-2xl p-3
+        shadow-lg backdrop-blur
+        glossy-top-border
+      "
+    >
+      <.link
+        patch={~p"/settings?section=appearance"}
+        class={[
+          "group rounded-2xl border px-4 py-4 transition-all duration-200",
+          @section == "appearance" && "bg-primary/15 border-primary/40 shadow-lg",
+          @section != "appearance" &&
+            "bg-base-200/50 border-base-300/60 hover:bg-base-200/80 hover:border-base-300"
+        ]}
+      >
+        <div class="flex items-center gap-4">
+          <div class={[
+            "flex size-12 items-center justify-center rounded-2xl transition-colors duration-200",
+            @section == "appearance" && "bg-primary/20 text-primary",
+            @section != "appearance" && "bg-base-300/70 text-base-content/70"
+          ]}>
+            <.icon name="hero-paint-brush" class="size-6" />
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Appearance</p>
+            <p class="text-xs text-base-content/60">Themes and styling</p>
+          </div>
+        </div>
+      </.link>
+      <.link
+        patch={~p"/settings?section=network"}
+        class={[
+          "group rounded-2xl border px-4 py-4 transition-all duration-200",
+          @section == "network" && "bg-primary/15 border-primary/40 shadow-lg",
+          @section != "network" &&
+            "bg-base-200/50 border-base-300/60 hover:bg-base-200/80 hover:border-base-300"
+        ]}
+      >
+        <div class="flex items-center gap-4">
+          <div class={[
+            "flex size-12 items-center justify-center rounded-2xl transition-colors duration-200",
+            @section == "network" && "bg-primary/20 text-primary",
+            @section != "network" && "bg-base-300/70 text-base-content/70"
+          ]}>
+            <.icon name="hero-wifi" class="size-6" />
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Network</p>
+            <p class="text-xs text-base-content/60">Hardware inventory</p>
+          </div>
+        </div>
+      </.link>
+    </aside>
+
+    <section id="settings-content" class="h-full">
+      <%= if @section == "appearance" do %>
+        <.panel class="h-full p-6">
+          <div class="flex flex-col gap-6">
+            <div class="flex items-start justify-between">
+              <div>
+                <h2 class="text-xl font-semibold text-base-content">Appearance</h2>
+                <p class="text-sm text-base-content/60">
+                  Pick a daisyUI theme that matches the room.
+                </p>
+              </div>
+              <div class="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                Live preview
+              </div>
+            </div>
+
+            <.form for={@form} id="appearance-form" phx-change="update_theme" class="max-w-xs">
+              <.input
+                field={@form[:theme]}
+                type="select"
+                label="DaisyUI Theme"
+                options={@theme_options}
+              />
+            </.form>
+
+            <div class="text-xs text-base-content/60">
+              Theme changes apply instantly across the dashboard.
+            </div>
+          </div>
+        </.panel>
+      <% else %>
+        <.panel class="h-full p-6">
+          <div class="flex h-full flex-col items-start justify-center gap-4">
+            <div class="rounded-2xl bg-base-300/70 p-4">
+              <.icon name="hero-server-stack" class="size-8 text-base-content/70" />
+            </div>
+            <div>
+              <h2 class="text-xl font-semibold text-base-content">Network inventory</h2>
+              <p class="text-sm text-base-content/60">
+                Coming soon — manage hardware monitors and connected devices.
+              </p>
+            </div>
+          </div>
+        </.panel>
+      <% end %>
+    </section>
+  </div>
+</Layouts.app>

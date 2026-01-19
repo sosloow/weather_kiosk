@@ -4,7 +4,7 @@ defmodule WeatherServer.Utils.Time do
   @spec now() :: DateTime.t()
   def now(), do: DateTime.utc_now()
 
-  @spec local_now_time :: Time.t()
+  @spec local_now_time() :: Time.t() | {:error, String.t()}
   def local_now_time() do
     case DateTime.now(get_tz()) do
       {:ok, datetime} -> DateTime.to_time(datetime)
