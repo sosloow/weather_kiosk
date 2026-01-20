@@ -32,6 +32,8 @@ config :phoenix, :plug_init_mode, :runtime
 # Set Req to use the test adapter
 config :req, :adapter, Req.Test
 
+config :weather_server, :cache_immediate_ticks, false
+
 # Enable helpful, but potentially expensive runtime checks
 config :phoenix_live_view,
   enable_expensive_runtime_checks: true
@@ -46,6 +48,10 @@ config :weather_server, :weatherapi_req_options,
 
 config :weather_server, :armaqi_req_options,
   plug: {Req.Test, WeatherServer.Apis.Armaqi},
+  retry: false
+
+config :weather_server, :prometheus_req_options,
+  plug: {Req.Test, WeatherServer.Apis.Prometheus},
   retry: false
 
 System.put_env("OPENAQ_API_KEY", "test-key")

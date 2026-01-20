@@ -1,0 +1,1 @@
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"up","host":"rp5","instance":"rp5","job":"node","role":"metrics","site":"home"},"value":[1768872999,"1"]}]},"stats":{"seriesFetched":"1","executionTimeMsec":6}}

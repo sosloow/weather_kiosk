@@ -532,18 +532,93 @@ defmodule WeatherServerWeb.CoreComponents do
 
   slot :inner_block, required: true
   attr :class, :string, default: ""
+  attr :scroll_x, :boolean, default: false
+  attr :scroll_y, :boolean, default: false
 
   def panel(assigns) do
     ~H"""
-    <section class={["
-    card bg-base-200/90 border border-base-300/70
-    shadow-xl rounded-2xl backdrop-blur
-    min-h-0 h-full relative
-    z-20 overflow-visible
-    glossy-top-border
-    ", @class]}>
-      {render_slot(@inner_block)}
+    <section class={[
+      "card bg-base-200/90 border border-base-300/70 shadow-xl rounded-2xl backdrop-blur",
+      "min-h-0 h-full relative z-20 glossy-top-border",
+      !@scroll_x && !@scroll_y && "overflow-visible",
+      (@scroll_x || @scroll_y) && "overflow-hidden",
+      @class
+    ]}>
+      <%= if @scroll_x || @scroll_y do %>
+        <div class={[
+          "h-full w-full min-h-0",
+          @scroll_x && "overflow-x-auto",
+          @scroll_y && "overflow-y-auto",
+          @scroll_x && !@scroll_y && "overflow-y-hidden",
+          @scroll_y && !@scroll_x && "overflow-x-hidden",
+          (@scroll_x || @scroll_y) && "panel-scrollbar"
+        ]}>
+          {render_slot(@inner_block)}
+        </div>
+      <% else %>
+        {render_slot(@inner_block)}
+      <% end %>
     </section>
     """
   end
+
+  @doc """
+  Renders a vertical metric bar with horizontal ticks.
+  """
+  attr :value, :float, default: nil
+  attr :label, :string, required: true
+  attr :max, :float, default: 100.0
+  attr :active_class, :string, default: "bg-primary/70"
+  attr :muted_class, :string, default: "bg-base-300/60"
+
+  def bar_metric(assigns) do
+    ticks = 10
+
+    value =
+      case assigns.value do
+        value when is_number(value) -> value
+        _ -> nil
+      end
+
+    max = if is_number(assigns.max) && assigns.max > 0, do: assigns.max, else: 100
+
+    active_count =
+      case value do
+        nil -> 0
+        _ -> (value / max * ticks) |> Float.ceil() |> trunc() |> clamp_ticks(ticks)
+      end
+
+    assigns =
+      assigns
+      |> assign(:ticks, ticks)
+      |> assign(:active_count, active_count)
+      |> assign(:display_value, format_value(value))
+
+    ~H"""
+    <div class="flex flex-col items-center gap-2">
+      <div
+        class="flex flex-col-reverse gap-1"
+        title={@display_value}
+        aria-label={@label}
+      >
+        <%= for tick <- 1..@ticks do %>
+          <span class={[
+            "h-1 w-10 rounded-full",
+            tick <= @active_count && @active_class,
+            tick > @active_count && @muted_class
+          ]}>
+          </span>
+        <% end %>
+      </div>
+      <div class="text-xs font-semibold text-base-content/70 text-center">{@label}</div>
+    </div>
+    """
+  end
+
+  defp format_value(nil), do: "—"
+  defp format_value(value) when is_number(value), do: Float.round(value, 1) |> to_string()
+
+  defp clamp_ticks(value, _max) when value < 0, do: 0
+  defp clamp_ticks(value, max) when value > max, do: max
+  defp clamp_ticks(value, _max), do: value
 end

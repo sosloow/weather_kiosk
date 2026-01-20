@@ -19,6 +19,7 @@ defmodule WeatherServerWeb.Router do
 
     get "/", PageController, :home
     live "/weather", WeatherLive
+    live "/hardware", HardwareLive
     live "/settings", SettingsLive
   end
 

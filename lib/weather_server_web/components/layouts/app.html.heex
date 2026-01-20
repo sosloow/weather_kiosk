@@ -61,7 +61,7 @@
     </div>
   </header>
 
-  <main id="page-content" class="col-span-2 row-start-2">
+  <main id="page-content" class="col-span-2 row-start-2 min-h-0 h-full">
     <%= if assigns[:inner_block] do %>
       {render_slot(@inner_block)}
     <% else %>
@@ -99,8 +99,8 @@
         ]}
       />
     </.link>
-    <a
-      href="#"
+    <.link
+      navigate={~p"/hardware"}
       data-page="hardware"
       class={[
         "group flex items-center justify-center w-full aspect-square rounded-2xl transition-all duration-200",
@@ -118,7 +118,7 @@
             "text-base-content/70 group-hover:text-base-content"
         ]}
       />
-    </a>
+    </.link>
     <.link
       navigate={~p"/settings"}
       data-page="settings"
