@@ -8,10 +8,6 @@ import Config
 config :weather_server, WeatherServerWeb.Endpoint,
   cache_static_manifest: "priv/static/cache_manifest.json"
 
-# Force using SSL in production. This also sets the "strict-security-transport" header,
-# also known as HSTS. `:force_ssl` is required to be set at compile-time.
-config :weather_server, WeatherServerWeb.Endpoint, force_ssl: [rewrite_on: [:x_forwarded_proto]]
-
 # Configure Swoosh API Client
 config :swoosh, api_client: Swoosh.ApiClient.Req
 

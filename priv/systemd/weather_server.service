@@ -1,0 +1,20 @@
+[Unit]
+Description=WeatherServer
+After=network.target
+
+[Service]
+Type=simple
+User=weather
+Group=weather
+WorkingDirectory=/srv/weather_server/current
+Environment=PHX_SERVER=true
+EnvironmentFile=/etc/weather_server/weather_server.env
+ExecStart=/srv/weather_server/current/bin/weather_server start
+ExecStop=/srv/weather_server/current/bin/weather_server stop
+Restart=on-failure
+RestartSec=5
+SyslogIdentifier=weather_server
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
